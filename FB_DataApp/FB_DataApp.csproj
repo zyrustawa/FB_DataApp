@@ -68,6 +68,7 @@
     <Compile Include="Activities\WelcomePage.cs" />
     <Compile Include="Database\MyDB.cs" />
     <Compile Include="Database\Tables\LayHealthWorker.cs" />
+    <Compile Include="Database\Tables\WorkPlace.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
