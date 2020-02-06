@@ -24,6 +24,7 @@ namespace FB_DataApp.Database.Tables
         public String Dob { get; set; }//dob=date of birth
         public String Clinic { get; set; }
         public String Gender { get; set; }
+        public String WorkplaceID { get; set; }
         public String Password { get; set; }
 
 
