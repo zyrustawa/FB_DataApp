@@ -66,9 +66,12 @@
     <Compile Include="Activities\Session1.cs" />
     <Compile Include="Activities\SessionEnd.cs" />
     <Compile Include="Activities\WelcomePage.cs" />
+    <Compile Include="Database\Tables\CKTRegister.cs" />
+    <Compile Include="Database\Tables\ClientSession.cs" />
     <Compile Include="Database\MyDB.cs" />
     <Compile Include="Database\Tables\Client.cs" />
     <Compile Include="Database\Tables\LayHealthWorker.cs" />
+    <Compile Include="Database\Tables\Session.cs" />
     <Compile Include="Database\Tables\WorkPlace.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
