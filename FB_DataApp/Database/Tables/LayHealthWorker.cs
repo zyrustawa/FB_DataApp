@@ -15,7 +15,7 @@ namespace FB_DataApp.Database.Tables
 {
     class LayHealthWorker
     {
-       [PrimaryKey, AutoIncrement]
+       [PrimaryKey]
         public String LHWid { get; set; }
         public String Name { get; set; }
         public String Surname { get; set; }
