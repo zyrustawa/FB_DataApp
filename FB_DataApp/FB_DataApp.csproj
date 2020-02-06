@@ -56,6 +56,16 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activities\Account.cs" />
+    <Compile Include="Activities\CheckCKT.cs" />
+    <Compile Include="Activities\CKTRegister.cs" />
+    <Compile Include="Activities\Contact.cs" />
+    <Compile Include="Activities\FollowUpSession.cs" />
+    <Compile Include="Activities\Help.cs" />
+    <Compile Include="Activities\Login.cs" />
+    <Compile Include="Activities\Session1.cs" />
+    <Compile Include="Activities\SessionEnd.cs" />
+    <Compile Include="Activities\WelcomePage.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
