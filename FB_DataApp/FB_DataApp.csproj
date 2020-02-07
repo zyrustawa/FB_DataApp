@@ -114,7 +114,9 @@
     </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\toolbar.axml" />
+  </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Account.axml">
       <SubType>Designer</SubType>
