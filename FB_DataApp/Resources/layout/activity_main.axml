@@ -29,7 +29,7 @@
 			android:minWidth="25px"
 			android:minHeight="25px"
 			android:layout_width="match_parent"
-			android:layout_height="50dp"
+			android:layout_height="150dp"
 			android:id="@+id/relativeLayout1" > 
 			<ImageView
 						android:src="@drawable/fbbench"

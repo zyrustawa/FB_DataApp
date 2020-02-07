@@ -3,6 +3,9 @@ using Android.OS;
 using Android.Support.V7.App;
 using Android.Runtime;
 using Android.Widget;
+using Android.Support.Design.Widget;
+using Android.Content;
+using Android.Views;
 
 namespace FB_DataApp
 {
@@ -17,6 +20,29 @@ namespace FB_DataApp
             var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
             SupportActionBar.Title = "The Friendship Bench";
+        }
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.action_menu, menu);
+            // shona=FindViewById<IMenuItem>(menu.FindItem)
+            return base.OnCreateOptionsMenu(menu);
+
+        }
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Resource.Id.nav_home:
+                    {
+                        //Intent homeIntent = new Intent(this, typeof(Notification_Activity));
+                        //StartActivity(homeIntent);
+                        return true;
+                    }
+
+
+
+            }
+            return base.OnOptionsItemSelected(item);
         }
     }
 }
