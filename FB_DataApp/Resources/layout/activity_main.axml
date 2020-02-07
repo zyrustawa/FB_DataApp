@@ -25,8 +25,8 @@
 			android:id="@+id/relativeLayout1" > 
 			<ImageView
 						android:src="@drawable/fbbench"
-						android:layout_width="100dp"
-						android:layout_height="80dp"
+						android:layout_width="match_parent"
+						android:layout_height="150dp"
 						android:layout_marginTop="10dp"
 						android:layout_gravity="center"
 					
@@ -35,10 +35,14 @@
 			
 			</LinearLayout>
 			<LinearLayout
-				android:id="@+id/new"
+				android:id="@+id/newclientlyt"
 				android:layout_width="fill_parent"
 				android:layout_height="50sp"
 				android:orientation="horizontal"
+				android:background="#a9a9a9"
+				android:layout_marginTop="20dp"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
 			>
 				
 				<TextView
@@ -47,6 +51,8 @@
 					android:layout_height="fill_parent"
 					android:text="@string/Enewclient"
 					android:textAlignment="center"
+					android:textSize="28dp"
+					
 					/>
 			</LinearLayout>
 			<LinearLayout
@@ -54,6 +60,10 @@
 				android:layout_width="fill_parent"
 				android:layout_height="50sp"
 				android:orientation="horizontal"
+				android:background="#a9a9a9"
+				android:layout_marginTop="20dp"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
 			>
 				
 				<TextView
@@ -62,6 +72,8 @@
 					android:layout_height="fill_parent"
 					android:textAlignment="center"
 					android:text="@string/Efollowup"
+					android:textSize="28dp"
+					
 					/>
 			</LinearLayout>
 			<LinearLayout
@@ -69,6 +81,10 @@
 				android:layout_width="fill_parent"
 				android:layout_height="50sp"
 				android:orientation="horizontal"
+				android:background="#a9a9a9"
+				android:layout_marginTop="20dp"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
 			>
 				
 				<TextView
@@ -77,6 +93,8 @@
 					android:layout_height="fill_parent"
 					android:text="@string/Enewproblem"
 					android:textAlignment="center"
+					android:textSize="28dp"
+					
 					/>
 			</LinearLayout>
 			<LinearLayout
@@ -84,6 +102,10 @@
 				android:layout_width="fill_parent"
 				android:layout_height="50sp"
 				android:orientation="horizontal"
+				android:background="#a9a9a9"
+				android:layout_marginTop="20dp"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
 			>
 				
 				<TextView
@@ -92,6 +114,8 @@
 					android:layout_height="fill_parent"
 					android:text="@string/CKT"
 					android:textAlignment="center"
+					android:textSize="28dp"
+				
 					/>
 			</LinearLayout>
 			   
