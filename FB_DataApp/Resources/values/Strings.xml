@@ -1,4 +1,90 @@
 <resources>
-    <string name="app_name">FB_DataApp</string>
+    <string name="app_name">Friendship Bench</string>
     <string name="action_settings">Settings</string>
+    <string name="CKT">CKT Register</string>
+  <!--English values-->
+  
+  <!--End English values-->
+  <string name="Enewclient">New Client</string>
+  <string name="Efollowup">Follow Up</string>
+  <string name="Enewproblem">Returning Client</string>
+  <!--shona values-->
+  <string name="Snewclient">Muzukuru Mutsva</string>
+  <string name="Sfollowup">Muzukuru Adzoka</string>
+  <string name="Snewproblem">Muzukuru Adzoka nerimwe dambudziko </string>
+  <!--End shona values-->
+
+
+  <!--Ndebele values-->
+
+  <!--End Ndevele values-->
+
+  <!--ESQ14-->
+  <string name="EpstMonth">In the past Week: </string>
+  <string name="eqsn1">There were times in which i was thinking deeply or thinking about many thinks </string>
+  <string name="eqsn2">I found myself sometimes failing to concentrate</string>
+  <string name="eqsn3">I lost my temper or got annoyed over trivial matters</string>
+  <string name="eqsn4">I had nightmares or bad dreams</string>
+  <string name="eqsn5">I sometimes saw or heard things which others could not see or hear</string>
+  <string name="eqsn6">My stomach was aching</string>
+  <string name="eqsn7">I was frightened by trivial things</string>
+  <string name="eqsn8">I sometimes failed to sleep or lost sleep</string>
+  <string name="eqsn9">There were moments when i felt life was so tough that i cried or wanted to cry</string>
+  <string name="eqsn10">I felt run down (tired)</string>
+  <string name="eqsn11">At times I felt like commiting suicide</string>
+  <string name="eqsn12">I was generally unhappy with things that i would be doing each day</string>
+  <string name="eqsn13">My work was lagging behind</string>
+  <string name="eqsn14">I felt I had problems in deciding what to do</string>
+  <!--answers-->
+  <string name="eAnsYes">Yes</string>
+  <string name="eAnsNo">No</string>
+
+  <!--end anssw-->
+  <!--end ESQ14-->
+
+  <!--NSQ14-->
+  <!--Answers to questionnaire-->
+  <string name="NpstMonth">Evhikini eliphelileyo : </string>
+  <string name="nqsn1">kukekwaba lesikhati lapho owake wacabanga kakhulu kumbe ukucabanga izinto ezinengi.</string>
+  <string name="nqsn2">wake wazibona kwesinye isikhathi ungakwanisi ukufaka inqondo zakho ndawo inye.</string>
+  <string name="nqsn3">kulesikhathi lapho owake wazonda kakhulu kumbe wancaphuka ngezinto ezincane.</string>
+  <string name="nqsn4">owake waphupha amaphupho ayesabisayo.</string>
+  <string name="nqsn5">kulesikhati lapho owake wabona okwakungabonwa  ngabanye kumbe ukuzwa izinto ezazingazwakali ngabanye.</string>
+  <string name="nqsn6">wake wezwa isisu sibuhlungu</string>
+  <string name="nqsn7">eliphelileyo kulesikhathi lapho owake wethuswa yizinto ezincane.</string>
+  <string name="nqsn8">kulesikhathi owawusehluleka ukulala kumbe ukuphelelwa yibuthongo.</string>
+  <string name="nqsn9">kulezikhathi lapho owake wezwa kungani  impilo inzima kakhulu ukokuthi wacina ukhala kumbe ufuna ukukhala.</string>
+  <string name="nqsn10">kulesikhathi lapho owezwa ukukhathala.</string>
+  <string name="nqsn11">wake wafikelwa ngumncabango wokufuna ukuzibulala.</string>
+  <string name="nqsn12">wake wezwa ungathakazeleli ukwenza izinto owawuzenza nsukuzonke.</string>
+  <string name="nqsn13">umsebenzi wako wawusalela muvha.</string>
+  <string name="nqsn14">wawusizwa kukomela uswela ukuthi uqalisele ngaphi  </string>
+  <!--answers-->
+  <string name="nAnsYes">Yebo</string>
+  <string name="nAnsNo">Hatshi</string>
+
+  <!--end anssw-->
+  <!--End Of Questionnaire-->
+  <!--end NSQ14-->
+  <!--Start SSQ14 Questions in all languages -->
+  <!--SSQ14-->
+  <string name="SpstMonth">Muvhiki rapfuura: </string>
+  <string name="sqsn1">Pane pandaimboona ndichifungisisa kana kufunga zvakawanda </string>
+  <string name="sqsn2">Pane pandaimbotadza kuisa pfungwa dzangu pamwechete</string>
+  <string name="sqsn3">Pane pandaimboshatirwa kana kuita hasha zvenhando</string>
+  <string name="sqsn4">Pane pandaimborota hope dzinotyisa kana dzisina kunaka</string>
+  <string name="sqsn5">Pane pandaimboona kana kunzwa zvinhu zvaisaonekwa kana kunzwika nevamwe</string>
+  <string name="sqsn6">Pane pandaimborwadziwa nemudumbu</string>
+  <string name="sqsn7">Pane pandaimbovhundutswa nezvinhu zvisina maturo</string>
+  <string name="sqsn8">Pane pandaimbotadza kurara kana kushaya hope</string>
+  <string name="sqsn9">Pane pandaimbonza kuomerwa neupenyu zvekuti ndaimbochema kana kunzwa kuda kuchema</string>
+  <string name="sqsn10">Pane pandaimbonzwa kuneta(kurukutika)</string>
+  <string name="sqsn11">Pane pandaimboita pfungwa dzekuda kuzviuraya</string>
+  <string name="sqsn12">Ndainzwa kusafara nezvinhu zvandaiita zuva nezuva</string>
+  <string name="sqsn13">Basa rangu rainge rava kusarira kumashure</string>
+  <string name="sqsn14">Ndainzwa zvichindiomera kuti ndizive kuti ndoita zvipi</string>
+
+  <!--answers-->
+  <string name="sAnsYes">Hongu</string>
+  <string name="sAnsNo">Kwete</string>
 </resources>
