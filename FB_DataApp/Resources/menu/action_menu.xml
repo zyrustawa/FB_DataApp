@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+   <item
+    android:id="@+id/nav_home"
+     android:enabled="true"
+      android:title="Save"
+      android:icon="@drawable/down_right"
+      app:showAsAction="always"
+     />
+  <group android:checkableBehavior="single">
+    <item
+android:id="@+id/nav_shona"
+android:title="Shona" />
+    <item
+android:id="@+id/nav_english"
+android:title="English" />
+    <item
+android:id="@+id/nav_ndebele"
+android:title="Ndebele" />
+    
+  </group>
+</menu>
