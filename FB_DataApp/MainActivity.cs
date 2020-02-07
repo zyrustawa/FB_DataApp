@@ -33,7 +33,7 @@ namespace FB_DataApp
         {
             switch (item.ItemId)
             {
-                case Resource.Id.nav_admin:
+                case Resource.Id.nav_home:
                     {
                         Intent homeIntent = new Intent(this, typeof(Login));
                         StartActivity(homeIntent);

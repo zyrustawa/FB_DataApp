@@ -2735,8 +2735,8 @@ namespace FB_DataApp
 			// aapt resource value: 0x7f0800d8
 			public const int nav_help = 2131230936;
 			
-			// aapt resource value: 0x7f0800dc
-			public const int nav_home = 2131230940;
+			// aapt resource value: 0x7f0800d6
+			public const int nav_home = 2131230934;
 			
 			// aapt resource value: 0x7f0800b1
 			public const int navigation_header_container = 2131230897;
@@ -2794,9 +2794,6 @@ namespace FB_DataApp
 			
 			// aapt resource value: 0x7f0800a6
 			public const int problem = 2131230886;
-			
-			// aapt resource value: 0x7f0800d6
-			public const int profile = 2131230934;
 			
 			// aapt resource value: 0x7f080006
 			public const int progress_circular = 2131230726;
