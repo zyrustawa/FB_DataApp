@@ -6,10 +6,11 @@ using Android.Widget;
 using Android.Support.Design.Widget;
 using Android.Content;
 using Android.Views;
+using FB_DataApp.Activities;
 
 namespace FB_DataApp
 {
-    [Activity(Label = "@string/app_name")]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -32,10 +33,10 @@ namespace FB_DataApp
         {
             switch (item.ItemId)
             {
-                case Resource.Id.nav_home:
+                case Resource.Id.nav_admin:
                     {
-                        //Intent homeIntent = new Intent(this, typeof(Notification_Activity));
-                        //StartActivity(homeIntent);
+                        Intent homeIntent = new Intent(this, typeof(Login));
+                        StartActivity(homeIntent);
                         return true;
                     }
 

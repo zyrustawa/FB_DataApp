@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace FB_DataApp
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [Activity(Label = "@string/app_name")]
     public class Splash : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

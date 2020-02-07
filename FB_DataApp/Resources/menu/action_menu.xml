@@ -2,22 +2,28 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:app="http://schemas.android.com/apk/res-auto">
    <item
-    android:id="@+id/nav_home"
+    android:id="@+id/profile"
      android:enabled="true"
-      android:title="Save"
+      android:title="Account"
       android:icon="@drawable/User"
       app:showAsAction="always"
      />
-  <group android:checkableBehavior="single">
+  <group>
     <item
-        android:id="@+id/nav_shona"
-        android:title="Shona" />
-            <item
-        android:id="@+id/nav_english"
-        android:title="English" />
-            <item
-        android:id="@+id/nav_ndebele"
-        android:title="Ndebele" />
+        android:id="@+id/nav_about"
+        android:title="About" />
+    <item
+        android:id="@+id/nav_help"
+        android:title="Help" />
+    <item
+        android:id="@+id/nav_Support"
+        android:title="Support" />
+    <item
+        android:id="@+id/nav_general"
+        android:title="General Settings" />
+     <item
+        android:id="@+id/nav_admin"
+        android:title="Admin Settings" />
     
   </group>
 </menu>

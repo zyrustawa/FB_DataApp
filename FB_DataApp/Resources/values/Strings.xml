@@ -87,4 +87,13 @@
   <!--answers-->
   <string name="sAnsYes">Hongu</string>
   <string name="sAnsNo">Kwete</string>
+  
+  <!--terms and conditions-->
+  <string name="agree">By Signing-in you agree to the </string>
+  <string name="tnc">Terms and conditions</string>
+  <!--end terms and conditions-->
+  <!--login info-->
+  <string name="account">Create account?</string>
+  <string name="forgot">Forgot password?</string>
+  <!--end login info-->
 </resources>

@@ -9,31 +9,157 @@
 		android:layout_width="match_parent"
 		android:layout_height="fill_parent"
 		android:id="@+id/scrollView1" >
-			<LinearLayout
+		<LinearLayout
 			android:orientation="vertical"
 			android:minWidth="25px"
 			android:minHeight="25px"
 			android:layout_width="match_parent"
 			android:layout_height="fill_parent"
-			android:id="@+id/relativeLayout1" > 
-				<LinearLayout
+			android:id="@+id/relativeLayout1">
+			<LinearLayout
 				android:orientation="horizontal"
 				android:minWidth="25px"
 				android:minHeight="25px"
 				android:layout_width="match_parent"
 				android:layout_height="150dp"
-				android:id="@+id/relativeLayout1" > 
+				android:id="@+id/relativeLayout1">
 				<ImageView
-							android:src="@drawable/fbbench"
-							android:layout_width="match_parent"
-							android:layout_height="150dp"
-							android:layout_marginTop="10dp"
-							android:layout_gravity="center"
-					
-							android:contextClickable="false"
-							android:id="@+id/imageView2" />
-			
-				</LinearLayout>
+					android:src="@drawable/FBLogotransparent"
+					android:layout_width="match_parent"
+					android:layout_height="150dp"
+					android:layout_marginTop="10dp"
+					android:layout_gravity="center"
+					android:contextClickable="false"
+					android:id="@+id/imageView2" />
 			</LinearLayout>
+			<LinearLayout
+				android:id="@+id/newclientlyt"
+				android:layout_width="fill_parent"
+				android:layout_height="50sp"
+				android:orientation="horizontal"
+				android:background="#a9a9a9"
+				android:layout_marginTop="0dp"
+			>
+				<TextView
+					android:id="@+id/newclient"
+					android:layout_width="match_parent"
+					android:layout_height="fill_parent"
+					android:text="Data-Collect: Sign-in"
+					android:textAlignment="center"
+					android:textSize="28dp"
+					
+					/>
+			</LinearLayout>
+			<LinearLayout
+				android:id="@+id/userna"
+				android:layout_width="fill_parent"
+				android:layout_height="60sp"
+				android:orientation="horizontal"
+				android:layout_marginTop="20dp"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+			>
+				<EditText
+					android:id="@+id/username"
+					android:layout_width="match_parent"
+					android:layout_height="fill_parent"
+					android:textAlignment="center"
+					android:hint="Username"
+					android:textSize="28dp"
+					
+					/>
+			</LinearLayout>
+			<LinearLayout
+				android:id="@+id/pass"
+				android:layout_width="fill_parent"
+				android:layout_height="50sp"
+				android:orientation="horizontal"
+				android:layout_marginTop="20dp"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+			>
+				<EditText
+					android:id="@+id/password"
+					android:layout_width="match_parent"
+					android:layout_height="fill_parent"
+					android:textAlignment="center"
+					android:textSize="28dp"
+					android:hint="Password"
+					android:inputType="textPassword"
+					/>
+			</LinearLayout>
+			<LinearLayout
+				android:id="@+id/forgott"
+				android:layout_marginTop="10dp"
+				android:orientation="horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+				<CheckBox
+					android:text="@string/agree"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:id="@+id/checkBox1" />
+				<TextView
+					android:text="@string/tnc"
+					android:id="@+id/account1"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:padding="5dp"
+					android:layout_marginTop="0dp"
+					android:textAlignment="center"
+					android:clickable="true"
+					android:textSize="18sp"
+					android:contextClickable="true"/>
+			</LinearLayout>
+			<LinearLayout
+				android:id="@+id/loginn"
+				android:layout_width="fill_parent"
+				android:layout_height="60sp"
+				android:orientation="horizontal"
+				android:layout_marginTop="20dp"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+			>
+				<Button
+					android:id="@+id/login"
+					android:layout_width="match_parent"
+					android:layout_height="fill_parent"
+					android:textAlignment="center"
+					android:textSize="28dp"
+					android:hint="Password"
+					android:inputType="textPassword"
+					/>
+			</LinearLayout>
+			<LinearLayout
+			android:id="@+id/forgott"
+			android:layout_marginTop="50dp"
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+				<TextView
+				android:text="@string/forgot"
+				android:id="@+id/forg"
+				android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="5dp"
+						android:layout_marginTop="10dp"
+						android:textAlignment="center"
+						android:textSize="18sp"
+				        android:clickable="true"
+						android:contextClickable="true"/>
+					<TextView
+						android:text="@string/account"
+						android:id="@+id/account1"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="5dp"
+				      
+						android:layout_marginTop="10dp"
+						android:textAlignment="center"
+				        android:clickable="true"
+						android:textSize="18sp"
+						android:contextClickable="true"/>
+			</LinearLayout>
+		</LinearLayout>
 	</ScrollView>
 </LinearLayout>
