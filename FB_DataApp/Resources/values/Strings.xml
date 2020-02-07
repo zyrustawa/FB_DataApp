@@ -95,5 +95,6 @@
   <!--login info-->
   <string name="account">Create account?</string>
   <string name="forgot">Forgot password?</string>
+  <string name="already">I already have an account</string>
   <!--end login info-->
 </resources>

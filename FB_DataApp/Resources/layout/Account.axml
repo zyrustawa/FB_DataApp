@@ -17,28 +17,28 @@
 			android:layout_height="fill_parent"
 			android:id="@+id/relativeLayout1" > 
 			<LinearLayout
-			android:orientation="horizontal"
-			android:minWidth="25px"
-			android:minHeight="25px"
-			android:layout_width="match_parent"
-			android:layout_height="50dp"
-			android:id="@+id/relativeLayout1" > 
-			<ImageView
-						android:src="@drawable/fbbench"
-						android:layout_width="100dp"
-						android:layout_height="80dp"
-						android:layout_marginTop="10dp"
-						android:layout_gravity="center"
-					
-						android:contextClickable="false"
-						android:id="@+id/imageView2" />
-			
+				android:orientation="horizontal"
+				android:minWidth="25px"
+				android:minHeight="25px"
+				android:layout_width="match_parent"
+				android:layout_height="100dp"
+				android:id="@+id/relativeLayout1">
+				<ImageView
+					android:src="@drawable/fbbench"
+					android:layout_width="match_parent"
+					android:layout_height="100dp"
+					android:layout_marginTop="10dp"
+					android:layout_gravity="center"
+					android:contextClickable="false"
+					android:id="@+id/imageView2" />
 			</LinearLayout>
 			<LinearLayout
 				android:id="@+id/Layout_Name"
 				android:layout_width="fill_parent"
 				android:layout_height="50sp"
 				android:orientation="horizontal"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
 			>
 				
 				<EditText
@@ -54,6 +54,8 @@
 				android:layout_width="fill_parent"
 				android:layout_height="50sp"
 				android:orientation="horizontal"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
 			>
 				
 				<EditText
@@ -69,6 +71,8 @@
 				android:layout_width="fill_parent"
 				android:layout_height="50sp"
 				android:orientation="horizontal"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
 			>
 				
 				<EditText
@@ -84,6 +88,8 @@
 				android:layout_width="fill_parent"
 				android:layout_height="50sp"
 				android:orientation="horizontal"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
 			>
 				
 				<EditText
@@ -100,6 +106,8 @@
 				android:layout_width="fill_parent"
 				android:layout_height="50sp"
 				android:orientation="horizontal"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
 			>
 				
 				<EditText
@@ -116,6 +124,8 @@
 				android:layout_width="fill_parent"
 				android:layout_height="50sp"
 				android:orientation="horizontal"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
 			>
 				
 				<EditText
@@ -132,6 +142,8 @@
 				android:layout_width="fill_parent"
 				android:layout_height="50sp"
 				android:layout_marginTop="10sp"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
 				android:orientation="horizontal">
 				<EditText
 				android:inputType="textPassword"
@@ -147,6 +159,8 @@
 				android:layout_width="fill_parent"
 				android:layout_height="50sp"
 				android:layout_marginTop="10sp"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
 				android:orientation="horizontal">
 				<EditText
 				android:inputType="textPassword"
@@ -161,6 +175,8 @@
 				android:layout_width="fill_parent"
 				android:layout_height="50sp"
 				android:layout_marginTop="10sp"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
 				android:orientation="horizontal">
 					<Button
 					android:text="Save"
@@ -168,7 +184,24 @@
 					android:layout_height="wrap_content"
 					android:id="@+id/button1" />
 			</LinearLayout>
-		
+			<LinearLayout
+			android:id="@+id/forgott"
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+				<TextView
+				android:text="@string/already"
+				android:id="@+id/forg"
+				android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:padding="0dp"
+						android:layout_marginTop="10dp"
+						android:textAlignment="center"
+						android:textSize="18sp"
+				        android:clickable="true"
+						android:contextClickable="true"/>
+					
+			</LinearLayout>
 		</LinearLayout>
 		
          

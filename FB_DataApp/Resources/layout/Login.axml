@@ -101,7 +101,7 @@
 					android:id="@+id/checkBox1" />
 				<TextView
 					android:text="@string/tnc"
-					android:id="@+id/account1"
+					android:id="@+id/tnc1"
 					android:layout_width="wrap_content"
 					android:layout_height="match_parent"
 					android:padding="5dp"
