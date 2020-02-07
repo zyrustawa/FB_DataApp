@@ -9,7 +9,7 @@ using Android.Views;
 
 namespace FB_DataApp
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [Activity(Label = "@string/app_name")]
     public class MainActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -19,7 +19,7 @@ namespace FB_DataApp
             SetContentView(Resource.Layout.activity_main);
             var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
-            SupportActionBar.Title = "The Friendship Bench";
+            SupportActionBar.Title = "Data-Collect";
         }
         public override bool OnCreateOptionsMenu(IMenu menu)
         {

@@ -5,19 +5,19 @@
     android:id="@+id/nav_home"
      android:enabled="true"
       android:title="Save"
-      android:icon="@drawable/fbbench"
+      android:icon="@drawable/User"
       app:showAsAction="always"
      />
   <group android:checkableBehavior="single">
     <item
-android:id="@+id/nav_shona"
-android:title="Shona" />
-    <item
-android:id="@+id/nav_english"
-android:title="English" />
-    <item
-android:id="@+id/nav_ndebele"
-android:title="Ndebele" />
+        android:id="@+id/nav_shona"
+        android:title="Shona" />
+            <item
+        android:id="@+id/nav_english"
+        android:title="English" />
+            <item
+        android:id="@+id/nav_ndebele"
+        android:title="Ndebele" />
     
   </group>
 </menu>

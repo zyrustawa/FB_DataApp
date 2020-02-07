@@ -16,11 +16,17 @@
       <item name="colorControlHighlight">#FF4081</item>
       <!-- You can also set colorControlNormal, colorControlActivated
       colorControlHighlight and colorSwitchThumbNormal. -->
-
+      <!--Splashscreen -->
+        <item name="android:windowBackground">@drawable/FBLogotransparent</item>  
+      <!--end splashscreen-->
     </style>
     <style name="Theme.DesignDemo" parent="Base.Theme.DesignDemo"></style>
     <style name="Base.Theme.DesignDemo" parent="Theme.AppCompat.Light.NoActionBar">
       <item name="colorPrimary">#2196F3</item>
       <item name="colorPrimaryDark">#1976D2</item>
     </style>
+    <style name="Theme.Splash" parent="android:Theme">  
+      <item name="android:windowBackground">@drawable/FBLogotransparent</item>  
+      <item name="android:windowNoTitle">true</item>  
+    </style> 
 </resources>
