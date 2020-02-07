@@ -5,7 +5,7 @@
     android:id="@+id/nav_home"
      android:enabled="true"
       android:title="Save"
-      android:icon="@drawable/down_right"
+      android:icon="@drawable/fbbench"
       app:showAsAction="always"
      />
   <group android:checkableBehavior="single">
