@@ -10,7 +10,7 @@
 	android:background="@color/yellow"
 	tools:menu="navigation"
 	>
-	<include android:id="@+id/toolbar" layout="@layout/toolbar" />
+	
 	<ScrollView
 		android:minWidth="25px"
 		android:minHeight="25px"
