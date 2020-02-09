@@ -20,7 +20,13 @@ namespace FB_DataApp.Activities
             base.OnCreate(savedInstanceState);
 
             // Create your application here
-            SetContentView(Resource.Layout.Login);
+            SetContentView(Resource.Layout.activity_login);
+            Button signinBtn = FindViewById<Button>(Resource.Id.btnsignin);
+            signinBtn.Click += SignInBtnClicked;
+        }
+        void SignInBtnClicked(object sender, EventArgs e)
+        {
+            SetContentView(Resource.Layout.WelcomePage);
         }
     }
 }

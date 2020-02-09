@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout 
 	xmlns:android="http://schemas.android.com/apk/res/android"
@@ -136,4 +134,3 @@
 	</ScrollView>
 		
 </LinearLayout>
->>>>>>> 7d8f8db8abfc23347a14f4f181c06936f15deeba

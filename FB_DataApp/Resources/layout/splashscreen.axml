@@ -28,6 +28,7 @@
         android:layout_marginBottom="32dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
+        
         cardview:cardBackgroundColor="#ffff"
         cardview:cardCornerRadius="20dp">
         <LinearLayout

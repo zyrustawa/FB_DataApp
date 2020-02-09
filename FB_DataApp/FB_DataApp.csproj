@@ -65,6 +65,7 @@
     <Compile Include="Activities\Login.cs" />
     <Compile Include="Activities\Session1.cs" />
     <Compile Include="Activities\SessionEnd.cs" />
+    <Compile Include="SplashActivity.cs" />
     <Compile Include="Activities\WelcomePage.cs" />
     <Compile Include="Database\Tables\CKTRegister.cs" />
     <Compile Include="Database\Tables\ClientSession.cs" />
@@ -73,7 +74,7 @@
     <Compile Include="Database\Tables\LayHealthWorker.cs" />
     <Compile Include="Database\Tables\Session.cs" />
     <Compile Include="Database\Tables\WorkPlace.cs" />
-    <Compile Include="MainActivity.cs" />
+    <Compile Include="Activities\MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -169,7 +170,6 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <AndroidResource Include="Resources\mipmap-hdpi\logo.PNG" />
   </ItemGroup>
   <ItemGroup>
@@ -183,7 +183,6 @@
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
       <SubType>Designer</SubType>
     </AndroidResource>
-=======
     <AndroidResource Include="Resources\drawable\FBBenchwhite.png" />
   </ItemGroup>
   <ItemGroup>
@@ -200,7 +199,15 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\menu\menu.xml" />
->>>>>>> 7d8f8db8abfc23347a14f4f181c06936f15deeba
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\splashscreen.axml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\splashscreen.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace FB_DataApp.Activities
 {
-    [Activity(Label = "WelcomePage")]
+   // [Activity(Label = "WelcomePage")]
     public class WelcomePage : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
