@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace FB_DataApp.Activities
 {
-   // [Activity(Label = "WelcomePage")]
+    [Activity(Label = "WelcomePage")]
     public class WelcomePage : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -21,6 +21,13 @@ namespace FB_DataApp.Activities
 
             // Create your application here
             SetContentView(Resource.Layout.WelcomePage);
+            Button mainmenu = FindViewById<Button>(Resource.Id.btnmainmenu);
+            mainmenu.Click += GoToMainMenuBtnClicked;
+        }
+        void GoToMainMenuBtnClicked(object sender, EventArgs e)
+        {
+            StartActivity(typeof(MainActivity));
         }
     }
+
 }

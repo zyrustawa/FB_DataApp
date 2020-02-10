@@ -26,7 +26,7 @@ namespace FB_DataApp.Activities
         }
         void SignInBtnClicked(object sender, EventArgs e)
         {
-            SetContentView(Resource.Layout.WelcomePage);
+            StartActivity(typeof(WelcomePage));
         }
     }
 }
