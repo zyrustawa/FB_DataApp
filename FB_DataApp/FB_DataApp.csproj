@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\Account.cs" />
+    <Compile Include="Activities\Activity1.cs" />
     <Compile Include="Activities\CheckCKT.cs" />
     <Compile Include="Activities\CKTRegister.cs" />
     <Compile Include="Activities\Contact.cs" />
@@ -66,10 +67,16 @@
     <Compile Include="Activities\Session1.cs" />
     <Compile Include="Activities\SessionEnd.cs" />
     <Compile Include="Activities\WelcomePage.cs" />
+    <Compile Include="Classes\TestConnection.cs" />
+    <Compile Include="Database\Crud\Delete.cs" />
+    <Compile Include="Database\Crud\Insert.cs" />
+    <Compile Include="Database\Crud\Select.cs" />
+    <Compile Include="Database\Crud\Update.cs" />
     <Compile Include="Database\Tables\CKTRegister.cs" />
     <Compile Include="Database\Tables\ClientSession.cs" />
     <Compile Include="Database\MyDB.cs" />
     <Compile Include="Database\Tables\Client.cs" />
+    <Compile Include="Database\Tables\Clinic.cs" />
     <Compile Include="Database\Tables\LayHealthWorker.cs" />
     <Compile Include="Database\Tables\Session.cs" />
     <Compile Include="Database\Tables\WorkPlace.cs" />
@@ -188,6 +195,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\About.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

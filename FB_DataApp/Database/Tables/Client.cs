@@ -15,11 +15,11 @@ namespace FB_DataApp.Database.Tables
 {
     class Client
     {
-        [PrimaryKey, AutoIncrement]
-
+        [PrimaryKey]
+        public int Id { get; set; }
         public String ClientID { get; set; }
         public String Name { get; set; }
-        public String Age { get; set; }
+        public String Dob { get; set; }
         public String Gender { get; set; }
         public String Date { get; set; }
         public String Status { get; set; }

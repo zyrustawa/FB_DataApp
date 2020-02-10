@@ -15,21 +15,23 @@ namespace FB_DataApp.Database
     class ClientSession
     {
         [PrimaryKey, AutoIncrement]
-
+        public int Id { get; set; }
         public String SessionID { get; set; }
-        public bool Qsn1 { get; set; }
-        public bool Qsn2 { get; set; }
-        public bool Qsn3 { get; set; }
-        public bool Qsn4 { get; set; }
-        public bool Qsn5 { get; set; }
-        public bool Qsn6 { get; set; }
-        public bool Qsn8 { get; set; }
-        public bool Qsn9 { get; set; }
-        public bool Qsn10 { get; set; }
-        public bool Qsn11 { get; set; }
-        public bool Qsn12 { get; set; }
-        public bool Qsn13 { get; set; }
-        public bool Qsn14 { get; set; }
+        public String Qsn1 { get; set; }
+        public String Qsn2 { get; set; }
+        public String Qsn3 { get; set; }
+        public String Qsn4 { get; set; }
+        public String Qsn5 { get; set; }
+        public String Qsn6 { get; set; }
+        public String Qsn7 { get; set; }
+
+        public String Qsn8 { get; set; }
+        public String Qsn9 { get; set; }
+        public String Qsn10 { get; set; }
+        public String Qsn11 { get; set; }
+        public String Qsn12 { get; set; }
+        public String Qsn13 { get; set; }
+        public String Qsn14 { get; set; }
         public String Date1 { get; set; }
         public String Status { get; set; }
     }

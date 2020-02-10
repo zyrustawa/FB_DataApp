@@ -16,6 +16,7 @@ namespace FB_DataApp.Database.Tables
     class LayHealthWorker
     {
        [PrimaryKey]
+        public int Id { get; set; }
         public String LHWid { get; set; }
         public String Name { get; set; }
         public String Surname { get; set; }
@@ -23,6 +24,8 @@ namespace FB_DataApp.Database.Tables
         public String Address { get; set; }
         public String Dob { get; set; }//dob=date of birth
         public String Clinic { get; set; }
+        public String Natid { get; set; }
+
         public String Gender { get; set; }
         public String WorkplaceID { get; set; }
         public String Password { get; set; }

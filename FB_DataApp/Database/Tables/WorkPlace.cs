@@ -16,6 +16,7 @@ namespace FB_DataApp.Database.Tables
     class WorkPlace
     {
         [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
         public string WorkPlaceID { get; set; }
         public string WorkPlaceName { get; set; }
     }

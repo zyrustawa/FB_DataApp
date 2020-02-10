@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Friendship Bench</string>
+    <string name="app_name">Data Collect</string>
     <string name="action_settings">Settings</string>
     <string name="CKT">CKT Register</string>
   <!--English values-->
@@ -97,4 +97,30 @@
   <string name="forgot">Forgot password?</string>
   <string name="already">I already have an account</string>
   <!--end login info-->
+  <!--Session-->
+  <string name="cpid">Client PID</string>
+  <string name="cssq14">SSQ 14</string>
+  <string name="cesq14">ESQ 14</string>
+  <string name="cnsq14">NSQ 14</string>
+  <string name="cname">Client Name</string>
+  <string name="cgender">Client Gender</string>
+  <string name="cage">Date of Birth</string>
+  <string name="csessiondate">Session Date</string>
+  <string name="csessionnumber">Session Number</string>
+  <string name="csessionlocation">Session Location</string>
+  <string name="cqsn1">Question 1</string>
+  <string name="cqsn2">Question 2</string>
+  <string name="cqsn3">Question 3</string>
+  <string name="cqsn4">Question 4</string>
+  <string name="cqsn5">Question 5</string>
+  <string name="cqsn6">Question 6</string>
+  <string name="cqsn7">Question 7</string>
+  <string name="cqsn8">Question 8</string>
+  <string name="cqsn9">Question 9</string>
+  <string name="cqsn10">Question 10</string>
+  <string name="cqsn11">Question 11</string>
+  <string name="cqsn12">Question 12</string>
+  <string name="cqsn13">Question 13</string>
+  <string name="cqsn14">Question 14</string>
+  <!--end session-->
 </resources>

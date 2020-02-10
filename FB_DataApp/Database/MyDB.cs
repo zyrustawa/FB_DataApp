@@ -3,7 +3,7 @@ using SQLite;
 using System;
 using System.IO;
 
-namespace take.DBconn
+namespace FB_DataApp.Database
 {
     class MyDB
     {

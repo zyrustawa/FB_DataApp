@@ -7,6 +7,9 @@ using Android.Support.Design.Widget;
 using Android.Content;
 using Android.Views;
 using FB_DataApp.Activities;
+using System;
+using Android.Util;
+using FB_DataApp.Classes;
 
 namespace FB_DataApp
 {
@@ -21,7 +24,113 @@ namespace FB_DataApp
             var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
             SupportActionBar.Title = "Data-Collect";
+            new TestConnection();
+            //click event for logo
+            ImageView image = FindViewById<ImageView>(Resource.Id.imageView2);
+            image.Click += Image_Click;
+            //click event for new client
+            TextView client = FindViewById<TextView>(Resource.Id.newclient);
+            client.Click += Client_Click;
+
+            //click event for follow up client
+            TextView followup = FindViewById<TextView>(Resource.Id.followup);
+            followup.Click += Followup_Click;
+
+            //click event for returning client
+            TextView returnre = FindViewById<TextView>(Resource.Id.newproblem);
+            returnre.Click += Returnre_Click;
+            //click event for CKT Register
+            TextView reg = FindViewById<TextView>(Resource.Id.cktreg);
+            reg.Click += Reg_Click;
+            //String sid = DateTime.Now.ToShortDateString();
+            //Toast.MakeText(this, "date " + sid, ToastLength.Short).Show();
         }
+
+        private void Reg_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Intent intent = new Intent(this, typeof(CKTRegister));
+                StartActivity(intent);
+            }
+            catch (Exception ex)
+            {
+                Log.Error("Image click", "Error " + ex.Message);
+            }
+            finally
+            {
+
+            }
+        }
+
+        private void Returnre_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Intent intent = new Intent(this, typeof(FollowUpSession));
+                StartActivity(intent);
+            }
+            catch (Exception ex)
+            {
+                Log.Error("Image click", "Error " + ex.Message);
+            }
+            finally
+            {
+
+            }
+        }
+
+        private void Followup_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Intent intent = new Intent(this, typeof(FollowUpSession));
+                StartActivity(intent);
+            }
+            catch (Exception ex)
+            {
+                Log.Error("Image click", "Error " + ex.Message);
+            }
+            finally
+            {
+
+            }
+        }
+
+        private void Client_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Intent intent = new Intent(this, typeof(Session1));
+                StartActivity(intent);
+            }
+            catch (Exception ex)
+            {
+                Log.Error("Image click", "Error " + ex.Message);
+            }
+            finally
+            {
+
+            }
+        }
+
+        private void Image_Click(object sender, System.EventArgs e)
+        {
+           try
+            {
+                Intent intent = new Intent(this, typeof(Activity1));
+                StartActivity(intent);
+            }
+            catch(Exception ex)
+            {
+                Log.Error("Image click", "Error " + ex.Message);
+            }
+            finally
+            {
+
+            }
+        }
+
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
             MenuInflater.Inflate(Resource.Menu.action_menu, menu);

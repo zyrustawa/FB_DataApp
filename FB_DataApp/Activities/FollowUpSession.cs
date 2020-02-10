@@ -7,13 +7,14 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
+using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 
 namespace FB_DataApp.Activities
 {
     [Activity(Label = "FollowUpSession")]
-    public class FollowUpSession : Activity
+    public class FollowUpSession : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -21,6 +22,10 @@ namespace FB_DataApp.Activities
 
             // Create your application here
             SetContentView(Resource.Layout.FollowUpSession);
+
+            var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+            SetSupportActionBar(toolbar);
+            SupportActionBar.Title = "Data-Collect: Follow-Up Session";
         }
     }
 }
