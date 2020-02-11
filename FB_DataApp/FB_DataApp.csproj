@@ -56,16 +56,20 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activities\About.cs" />
     <Compile Include="Activities\Account.cs" />
     <Compile Include="Activities\Activity1.cs" />
+    <Compile Include="Activities\Admin_settings.cs" />
     <Compile Include="Activities\CheckCKT.cs" />
     <Compile Include="Activities\CKTRegister.cs" />
     <Compile Include="Activities\Contact.cs" />
     <Compile Include="Activities\FollowUpSession.cs" />
+    <Compile Include="Activities\General_settings.cs" />
     <Compile Include="Activities\Help.cs" />
     <Compile Include="Activities\Login.cs" />
     <Compile Include="Activities\Session1.cs" />
     <Compile Include="Activities\SessionEnd.cs" />
+    <Compile Include="Activities\Support.cs" />
     <Compile Include="Activities\WelcomePage.cs" />
     <Compile Include="Classes\TestConnection.cs" />
     <Compile Include="Database\Crud\Delete.cs" />
@@ -80,6 +84,7 @@
     <Compile Include="Database\Tables\LayHealthWorker.cs" />
     <Compile Include="Database\Tables\Session.cs" />
     <Compile Include="Database\Tables\WorkPlace.cs" />
+    <Compile Include="Helpers\Settings.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -119,6 +124,9 @@
   <ItemGroup>
     <PackageReference Include="sqlite-net-pcl">
       <Version>1.6.292</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugins.Settings">
+      <Version>3.1.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
   </ItemGroup>
@@ -198,6 +206,21 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\About.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Support.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\General_settings.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Admin_settings.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

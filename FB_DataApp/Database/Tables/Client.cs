@@ -17,6 +17,7 @@ namespace FB_DataApp.Database.Tables
     {
         [PrimaryKey]
         public int Id { get; set; }
+
         public String ClientID { get; set; }
         public String Name { get; set; }
         public String Dob { get; set; }

@@ -13,18 +13,18 @@ using Android.Widget;
 
 namespace FB_DataApp.Activities
 {
-    [Activity(Label = "Help")]
-    public class Help : AppCompatActivity
+    [Activity(Label = "Admin_settings")]
+    public class Admin_settings : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             // Create your application here
-            SetContentView(Resource.Layout.Help);
+            SetContentView(Resource.Layout.Admin_settings);
             var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
-            SupportActionBar.Title = "Data-Collect: Help";
+            SupportActionBar.Title = "Data-Collect: Admin Settings";
         }
     }
 }

@@ -121,30 +121,32 @@ namespace FB_DataApp.Database.Crud
                     {
                         if(a.ClientID==args[0])
                         {
-                            code = 200;// client id already in use
+                            code = 3;// client id already in use
                         }
                         else if (a.Name == args[1] && a.Dob == args[2] && a.Gender==args[3])
                         {
-                            code = 201;//client already in the database
+                            code = 2;//client already in the database
+                         
                         }
                         
                         else
                         {
                             code = 100;
                         }
-
+                       
                     }
                 }
                 else
                 {
-                    code = 1;//no client details in the database
+                    code = 1;// client details in the database
                 }
+                //Log.Info("client-count", "number of client " + mList.Count);
 
             }
             catch (Exception e)
             {
                 code = 0;//Error while processing the transaction
-                Log.Error("Database-Error", "Error " + e.Message);
+                Log.Error("Database-CheckClient-Error", "Error " + e.Message);
             }
             return code;
         }
@@ -181,7 +183,7 @@ namespace FB_DataApp.Database.Crud
             catch (Exception e)
             {
                 code = 0;//Error while processing the transaction
-                Log.Error("Database-Error", "Error " + e.Message);
+                Log.Error("Database-ChecKSession-Error", "Error " + e.Message);
             }
             return code;
         }
@@ -191,7 +193,7 @@ namespace FB_DataApp.Database.Crud
             try
             {
                 List<ClientSession> abc = db.Table<ClientSession>().OrderBy(x => x.Id).ToList();
-                if (list.Count > 0)
+                if (abc.Count > 0)
                 {
 
                     foreach (ClientSession a in abc)
@@ -217,7 +219,7 @@ namespace FB_DataApp.Database.Crud
             catch (Exception e)
             {
                 code = 0;//Error while processing the transaction
-                Log.Error("Database-Error", "Error " + e.Message);
+                Log.Error("Database-CheckClientSession-Error", "Error " + e.Message);
             }
             return code;
         }

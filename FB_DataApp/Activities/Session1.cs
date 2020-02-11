@@ -162,9 +162,9 @@ namespace FB_DataApp.Activities
                 {
                     Toast.MakeText(this, "Enter date when the session was done", ToastLength.Short).Show();
                 }
-                else if(number.Text=="")
+                else if(number.Text=="" || number.Text !="1")
                 {
-                    Toast.MakeText(this, "Enter session number", ToastLength.Short).Show();
+                    Toast.MakeText(this, "Enter session number, it must be session number 1", ToastLength.Short).Show();
                 }
                 else if (qsn1 == "")
                 {
@@ -226,19 +226,69 @@ namespace FB_DataApp.Activities
                 {
                     String sid = DateTime.Now.ToShortDateString()+id.Text;
                     String date = DateTime.Now.ToShortTimeString();
-                    string [] client={id.Text,cname.Text,dob.Text,gender, DateTime.Now.ToString(),"0" };
+                    string [] client={id.Text,cname.Text,dob.Text,gender, date, "0" };
                     string[] session = {sid,number.Text,slocation,id.Text,lhwid,"0"};
                     string[] clientsession = {sid,qsn1,qsn2,qsn3,qsn4,qsn5,qsn6,qsn7,qsn8,qsn9,qsn10,qsn11,qsn12,qsn13,qsn14, date,"0" };
                     Insert abc = new Insert();
-                    int a = abc.Client(client), b = abc.Session(session), c = abc.ClientSession(clientsession);
-                    Toast.MakeText(this, "c " + a + " s " + b + " cs " +c, ToastLength.Short).Show();
-
+                    int a = abc.Client(client);
+                    int b = abc.Session(session), c = abc.ClientSession(clientsession);
+                    if(a==100)
+                    {
+                        if(b==100 && c==100)
+                        {
+                            Toast.MakeText(this, "client data saved successfully ", ToastLength.Short).Show();
+                        }
+                        else if ( b == 200 || c == 200)
+                        {
+                            Toast.MakeText(this, "The information already exists for this session ", ToastLength.Short).Show();
+                            //rollback from here
+                        }
+                        else if (b == 0 || c==0)
+                        {
+                            Toast.MakeText(this, "Database connection error", ToastLength.Short).Show();
+                        }
+                        else
+                        {
+                            Toast.MakeText(this, "Unable to save data", ToastLength.Short).Show();
+                            //rollback from here
+                        }
+                    }
+                    else if(a==200)
+                    {
+                        Toast.MakeText(this, "Error while saving client data ", ToastLength.Short).Show();
+                    }
+                    else if(a==201 || a==0)
+                    {
+                        Toast.MakeText(this, "Database error ", ToastLength.Short).Show();
+                    }
+                    else if(a==1)
+                    {
+                        Toast.MakeText(this, "client id already in use ", ToastLength.Short).Show();
+                    }
+                    else if(a==2)
+                    {
+                        Toast.MakeText(this, "Client details already exists in the database", ToastLength.Short).Show();
+                    }
+                    else if(a==0)
+                    {
+                        Toast.MakeText(this, "Database connection error", ToastLength.Short).Show();
+                    }
+                    else if(a==3)
+                    {
+                        Toast.MakeText(this, "Session for this client has been saved", ToastLength.Short).Show();
+                    }
+                    else
+                    {
+                        Toast.MakeText(this, "Unknown error ", ToastLength.Short).Show();
+                    }
+                    //Toast.MakeText(this, "c "+a+" s "+b+" cs "+c, ToastLength.Short).Show();
                 }
             }
             catch(Exception ex)
             {
-                Toast.MakeText(this, "Error " + ex.Message, ToastLength.Short).Show();
+                Toast.MakeText(this, "Error-session1 " + ex.Message, ToastLength.Short).Show();
             }
+           
         }
     }
 }

@@ -43,7 +43,8 @@ namespace FB_DataApp
             TextView reg = FindViewById<TextView>(Resource.Id.cktreg);
             reg.Click += Reg_Click;
             //String sid = DateTime.Now.ToShortDateString();
-            //Toast.MakeText(this, "date " + sid, ToastLength.Short).Show();
+          
+
         }
 
         private void Reg_Click(object sender, EventArgs e)
@@ -68,6 +69,7 @@ namespace FB_DataApp
             try
             {
                 Intent intent = new Intent(this, typeof(FollowUpSession));
+                intent.PutExtra("arg","1");//0 for a follow up of the different issue
                 StartActivity(intent);
             }
             catch (Exception ex)
@@ -85,6 +87,7 @@ namespace FB_DataApp
             try
             {
                 Intent intent = new Intent(this, typeof(FollowUpSession));
+                intent.PutExtra("arg", "0");// same issue
                 StartActivity(intent);
             }
             catch (Exception ex)
@@ -148,7 +151,36 @@ namespace FB_DataApp
                         StartActivity(homeIntent);
                         return true;
                     }
-
+                case Resource.Id.nav_about:
+                    {
+                        Intent homeIntent = new Intent(this, typeof(About));
+                        StartActivity(homeIntent);
+                        return true;
+                    }
+                case Resource.Id.nav_help:
+                    {
+                        Intent homeIntent = new Intent(this, typeof(Help));
+                        StartActivity(homeIntent);
+                        return true;
+                    }
+                case Resource.Id.nav_Support:
+                    {
+                        Intent homeIntent = new Intent(this, typeof(Login));
+                        StartActivity(homeIntent);
+                        return true;
+                    }
+                case Resource.Id.nav_general:
+                    {
+                        Intent homeIntent = new Intent(this, typeof(General_settings));
+                        StartActivity(homeIntent);
+                        return true;
+                    }
+                case Resource.Id.nav_admin:
+                    {
+                        Intent homeIntent = new Intent(this, typeof(Admin_settings));
+                        StartActivity(homeIntent);
+                        return true;
+                    }
 
 
             }

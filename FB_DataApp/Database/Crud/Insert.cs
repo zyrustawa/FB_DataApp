@@ -24,10 +24,11 @@ namespace FB_DataApp.Database.Crud
         private SQLiteConnection db = null;
         public Insert()
         {
-            //try
-            //{
+            try
+            {
                 db = new MyDB().MyConn();
-               //db.CreateTables<LayHealthWorker, CKTRegister>;
+                //db.CreateTables<LayHealthWorker, CKTRegister>;
+                
                 db.CreateTable<LayHealthWorker>();
                 db.CreateTable<CKTRegister>();
                 db.CreateTable<Client>();
@@ -35,11 +36,11 @@ namespace FB_DataApp.Database.Crud
                 db.CreateTable<Session>();
                 db.CreateTable<WorkPlace>();
                 db.CreateTable<Clinic>();
-            //}
-            //catch (Exception ex)
-            //{
-            //    Log.Error("database", "error " + ex.Message);
-            //}
+            }
+            catch (Exception ex)
+            {
+                Log.Error("database", "error " + ex.Message);
+            }
 
 
         }
@@ -236,7 +237,7 @@ namespace FB_DataApp.Database.Crud
                             Qsn13 = args[13],
                             Qsn14 = args[14],
                             Date1 = args[15],
-                            Status = args[15]
+                            Status = args[16]
 
                         };
                         int a = db.Insert(abc);

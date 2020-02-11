@@ -13,18 +13,19 @@ using Android.Widget;
 
 namespace FB_DataApp.Activities
 {
-    [Activity(Label = "Help")]
-    public class Help : AppCompatActivity
+    [Activity(Label = "About")]
+    public class About : AppCompatActivity
+
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             // Create your application here
-            SetContentView(Resource.Layout.Help);
+            SetContentView(Resource.Layout.About);
             var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
-            SupportActionBar.Title = "Data-Collect: Help";
+            SupportActionBar.Title = "Data-Collect: About";
         }
     }
 }

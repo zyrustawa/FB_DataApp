@@ -48,6 +48,9 @@ namespace FB_DataApp.Activities
                 if(code==100)
                 {
                     Toast.MakeText(this, "Login successfull", ToastLength.Short).Show();
+                    Helpers.Settings.LHWID = username.Text;
+                    Helpers.Settings.CLHWPass = username.Text;
+
                     Intent intent = new Intent(this, typeof(MainActivity));
                     StartActivity(intent);
                 }
