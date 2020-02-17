@@ -30,12 +30,7 @@
 				android:layout_marginLeft="10dp"
 				android:layout_marginRight="10dp"
 					android:id="@+id/tableRow1">
-					<LinearLayout
-			android:id="@+id/forgott"
-			android:layout_marginTop="10dp"
-			android:orientation="horizontal"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content">
+					
 				<TextView
 				android:text="@string/cpid"
 				android:id="@+id/cpid1"
@@ -46,8 +41,9 @@
 						android:textSize="18sp"
 				        android:clickable="true"
 						android:contextClickable="true"/>
-					<EditText
+				<EditText
 						android:hint="Clinic_ID"
+						android:enabled="false"
 						android:id="@+id/account1"
 						android:layout_width="match_parent"
 						android:layout_height="wrap_content"
@@ -71,6 +67,7 @@
 						android:textAlignment="center"
 				        android:clickable="true"
 						android:textSize="18sp"
+						android:enabled="false"
 						android:contextClickable="true"/>
 				<EditText
 						android:hint="Client_ID"
@@ -85,7 +82,7 @@
 				        android:clickable="true"
 						android:textSize="18sp"
 						android:contextClickable="true"/>
-			</LinearLayout>
+		
 				</TableRow>				
 
 			</TableLayout>
@@ -108,7 +105,7 @@
 						android:textSize="18sp"
 				        android:clickable="true"
 						android:contextClickable="true"/>
-				<EditText
+				<AutoCompleteTextView
 					android:id="@+id/name"
 					android:layout_width="match_parent"
 					android:layout_height="fill_parent"
@@ -135,32 +132,20 @@
 						android:textSize="18sp"
 				        android:clickable="true"
 						android:contextClickable="true"/>
-				<RadioGroup
-					android:minWidth="25px"
-					android:minHeight="25px"
-					android:orientation="horizontal"
-					android:layout_width="fill_parent"
-					android:padding="5dp"
-					android:layout_marginTop="10dp"
-					android:layout_height="50sp"
-					android:id="@+id/rbtngender">
-					<RadioButton
-						android:layout_width="wrap_content"
+							<EditText
+						android:hint="Gender"
+						android:id="@+id/gender"
+						android:layout_width="match_parent"
+						android:layout_weight="1"
 						android:layout_height="wrap_content"
-						android:text="Male"
-						android:id="@+id/radioButton1" />
-					<RadioButton
-						android:layout_width="wrap_content"
-						android:layout_height="wrap_content"
-						android:text="Female"
-						android:id="@+id/radioButton2" />
-					<RadioButton
-						android:layout_width="wrap_content"
-						android:layout_height="wrap_content"
-						android:text="Other"
-						android:id="@+id/radioButton3" />
-					
-				</RadioGroup>
+						android:padding="5dp"
+				        android:inputType="number"
+						android:layout_marginTop="10dp"
+						android:textAlignment="center"
+				        android:clickable="true"
+						android:textSize="18sp"
+					android:enabled="false"
+				/>
 				
 			</LinearLayout>
 			<LinearLayout
@@ -244,7 +229,7 @@
 					android:id="@+id/number"
 					android:layout_width="match_parent"
 					android:layout_height="fill_parent"
-					android:hint="Session Number"
+					android:hint="1"
 					android:textAlignment="center"
 					android:inputType="number"
 					
@@ -319,31 +304,42 @@
 				
 			
 			</LinearLayout>
-			<ScrollView
-				android:minWidth="25px"
-				android:minHeight="25px"
-				android:layout_width="match_parent"
-				android:layout_height="fill_parent"
-				android:scrollY="@dimen/tooltip_corner_radius"
-				android:id="@+id/scrollView1" >
-					<TableLayout
-				android:minWidth="25px"
-				android:minHeight="25px"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content"
-				android:id="@+id/tableLayout1">
-				<TableRow
-					android:layout_width="fill_parent"
-					android:layout_height="50dp"
-				android:layout_marginLeft="10dp"
-				android:layout_marginRight="10dp"
-					android:id="@+id/tableRow1">
-					<LinearLayout
-			android:id="@+id/forgott"
-			android:layout_marginTop="10dp"
-			android:orientation="horizontal"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content">
+			<ScrollView 
+android:minWidth="25px"
+android:minHeight="25px"
+android:layout_width="match_parent"
+android:layout_height="fill_parent"
+android:id="@+id/scrollView1" >
+<TableLayout 
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:stretchColumns="1">
+	<View
+android:layout_height="2dip"
+android:background="#FF909090"/>
+	<TableRow>
+TableLayout is a ViewGroup that displays child View elements in rows and columns.
+Start a new project named HelloTableLayout.
+Open the Resources/Layout/Main.axml file and insert the following:
+<TextView
+android:textAlignment="center"
+android:text="@string/cqsn"
+android:padding="3dip"/>
+<TextView
+android:text="@string/SpstMonth"
+android:textAlignment="center"
+android:padding="3dip"/>
+<TextView
+android:text="@string/sselect"
+android:gravity="right"
+android:textAlignment="center"
+android:padding="3dip"/>
+</TableRow>
+					<View
+android:layout_height="2dip"
+						
+android:background="#FF909090"/>
+<TableRow>
 				<TextView
 				android:text="@string/cqsn1"
 				android:id="@+id/qsn1"
@@ -389,22 +385,12 @@
 					
 					
 				</RadioGroup>
-				
-			</LinearLayout>
-				</TableRow>		
-			    <TableRow
-					android:layout_width="fill_parent"
-					android:layout_height="50dp"
-				android:layout_marginLeft="10dp"
-				android:layout_marginRight="10dp"
-					android:id="@+id/tableRow1">
-					<LinearLayout
-			android:id="@+id/forgott"
-			android:layout_marginTop="10dp"
-			android:orientation="horizontal"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content">
-				<TextView
+</TableRow>
+<View
+android:layout_height="2dip"
+android:background="#FF909090"/>
+<TableRow>
+	<TextView
 				android:text="@string/cqsn2"
 				android:id="@+id/cpid1"
 				android:layout_width="wrap_content"
@@ -414,7 +400,8 @@
 						android:textAlignment="center"
 						android:textSize="18sp"
 				        android:clickable="true"
-						android:contextClickable="true"/><TextView
+						android:contextClickable="true"/>
+				<TextView
 				android:text="@string/sqsn2"
 				android:id="@+id/cpid1"
 				android:layout_width="200dp"
@@ -449,21 +436,12 @@
 					
 				</RadioGroup>
 				
-			</LinearLayout>
-				</TableRow>		
-				<TableRow
-					android:layout_width="fill_parent"
-					android:layout_height="50dp"
-				android:layout_marginLeft="10dp"
-				android:layout_marginRight="10dp"
-					android:id="@+id/tableRow1">
-					<LinearLayout
-			android:id="@+id/forgott"
-			android:layout_marginTop="10dp"
-			android:orientation="horizontal"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content">
-				<TextView
+</TableRow>
+<View
+android:layout_height="2dip"
+android:background="#FF909090"/>
+<TableRow>
+<TextView
 				android:text="@string/cqsn3"
 				android:id="@+id/qsn3"
 				android:layout_width="wrap_content"
@@ -473,7 +451,8 @@
 						android:textAlignment="center"
 						android:textSize="18sp"
 				        android:clickable="true"
-						android:contextClickable="true"/><TextView
+						android:contextClickable="true"/>
+							<TextView
 				android:text="@string/sqsn3"
 				android:id="@+id/cpid3"
 				android:layout_width="200dp"
@@ -507,22 +486,12 @@
 					
 					
 				</RadioGroup>
-				
-			</LinearLayout>
-				</TableRow>		
-				<TableRow
-					android:layout_width="fill_parent"
-					android:layout_height="50dp"
-				android:layout_marginLeft="10dp"
-				android:layout_marginRight="10dp"
-					android:id="@+id/tableRow1">
-					<LinearLayout
-			android:id="@+id/forgott"
-			android:layout_marginTop="10dp"
-			android:orientation="horizontal"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content">
-				<TextView
+</TableRow>
+<View
+android:layout_height="2dip"
+android:background="#FF909090"/>
+<TableRow>
+<TextView
 				android:text="@string/cqsn4"
 				android:id="@+id/cpid1"
 				android:layout_width="wrap_content"
@@ -532,7 +501,8 @@
 						android:textAlignment="center"
 						android:textSize="18sp"
 				        android:clickable="true"
-						android:contextClickable="true"/><TextView
+						android:contextClickable="true"/>
+							<TextView
 				android:text="@string/sqsn4"
 				android:id="@+id/cpid1"
 				android:layout_width="200dp"
@@ -567,21 +537,15 @@
 					
 				</RadioGroup>
 				
-			</LinearLayout>
-				</TableRow>		
-				<TableRow
-					android:layout_width="fill_parent"
-					android:layout_height="50dp"
-				android:layout_marginLeft="10dp"
-				android:layout_marginRight="10dp"
-					android:id="@+id/tableRow1">
-					<LinearLayout
-			android:id="@+id/forgott"
-			android:layout_marginTop="10dp"
-			android:orientation="horizontal"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content">
-				<TextView
+</TableRow>
+<View
+android:layout_height="2dip"
+android:background="#FF909090"/>
+<TableRow>
+TableLayout is a ViewGroup that displays child View elements in rows and columns.
+Start a new project named HelloTableLayout.
+Open the Resources/Layout/Main.axml file and insert the following:
+	<TextView
 				android:text="@string/cqsn5"
 				android:id="@+id/cpid5"
 				android:layout_width="wrap_content"
@@ -591,7 +555,8 @@
 						android:textAlignment="center"
 						android:textSize="18sp"
 				        android:clickable="true"
-						android:contextClickable="true"/><TextView
+						android:contextClickable="true"/>
+							<TextView
 				android:text="@string/sqsn5"
 				android:id="@+id/cpid6"
 				android:layout_width="200dp"
@@ -625,22 +590,12 @@
 					
 					
 				</RadioGroup>
-				
-			</LinearLayout>
-				</TableRow>		
-				<TableRow
-					android:layout_width="fill_parent"
-					android:layout_height="50dp"
-					android:layout_marginLeft="10dp"
-					android:layout_marginRight="10dp"
-					android:id="@+id/tableRow1">
-				<LinearLayout
-					android:id="@+id/forgott"
-					android:layout_marginTop="10dp"
-					android:orientation="horizontal"
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content">
-				<TextView
+</TableRow>
+<View
+android:layout_height="2dip"
+android:background="#FF909090"/>
+<TableRow>
+<TextView
 					android:text="@string/cqsn6"
 					android:id="@+id/cpid6"
 					android:layout_width="wrap_content"
@@ -685,22 +640,12 @@
 					
 					
 				</RadioGroup>
-				
-			</LinearLayout>
-			</TableRow>		
-				<TableRow
-					android:layout_width="fill_parent"
-					android:layout_height="50dp"
-					android:layout_marginLeft="10dp"
-					android:layout_marginRight="10dp"
-					android:id="@+id/tableRow1">
-					<LinearLayout
-					android:id="@+id/forgott"
-					android:layout_marginTop="10dp"
-					android:orientation="horizontal"
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content">
-					<TextView
+</TableRow>
+	<View
+android:layout_height="2dip"
+android:background="#FF909090"/>
+	<TableRow>
+	<TextView
 					android:text="@string/cqsn7"
 					android:id="@+id/cpid7"
 					android:layout_width="wrap_content"
@@ -745,22 +690,12 @@
 					
 					
 				</RadioGroup>
-				
-			</LinearLayout>
-				</TableRow>		
-				<TableRow
-				android:layout_width="fill_parent"
-				android:layout_height="50dp"
-				android:layout_marginLeft="10dp"
-				android:layout_marginRight="10dp"
-				android:id="@+id/tableRow1">
-				<LinearLayout
-				android:id="@+id/forgott"
-				android:layout_marginTop="10dp"
-				android:orientation="horizontal"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content">
-				<TextView
+</TableRow>
+	<View
+android:layout_height="2dip"
+android:background="#FF909090"/>
+	<TableRow>
+<TextView
 				android:text="@string/cqsn8"
 				android:id="@+id/cpid8"
 				android:layout_width="wrap_content"
@@ -805,22 +740,12 @@
 					
 					
 				</RadioGroup>
-				
-			</LinearLayout>
-				</TableRow>		
-				<TableRow
-				android:layout_width="fill_parent"
-				android:layout_height="50dp"
-				android:layout_marginLeft="10dp"
-				android:layout_marginRight="10dp"
-				android:id="@+id/tableRow1">
-				<LinearLayout
-				android:id="@+id/forgott"
-				android:layout_marginTop="10dp"
-				android:orientation="horizontal"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content">
-				<TextView
+</TableRow>
+<View
+android:layout_height="2dip"
+android:background="#FF909090"/>
+	<TableRow>
+	<TextView
 				android:text="@string/cqsn9"
 				android:id="@+id/cpid9"
 				android:layout_width="wrap_content"
@@ -865,22 +790,12 @@
 					
 					
 				</RadioGroup>
-				
-				</LinearLayout>
-				</TableRow>		
-				<TableRow
-				android:layout_width="fill_parent"
-				android:layout_height="50dp"
-				android:layout_marginLeft="10dp"
-				android:layout_marginRight="10dp"
-				android:id="@+id/tableRow1">
-				<LinearLayout
-				android:id="@+id/forgott"
-				android:layout_marginTop="10dp"
-				android:orientation="horizontal"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content">
-				<TextView
+</TableRow>
+<View
+android:layout_height="2dip"
+android:background="#FF909090"/>
+	<TableRow>
+<TextView
 				android:text="@string/cqsn10"
 				android:id="@+id/cpid10"
 				android:layout_width="wrap_content"
@@ -925,22 +840,12 @@
 					
 					
 				</RadioGroup>
-				
-				</LinearLayout>
-				</TableRow>		
-				<TableRow
-				android:layout_width="fill_parent"
-				android:layout_height="50dp"
-				android:layout_marginLeft="10dp"
-				android:layout_marginRight="10dp"
-				android:id="@+id/tableRow1">
-				<LinearLayout
-				android:id="@+id/forgott"
-				android:layout_marginTop="10dp"
-				android:orientation="horizontal"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content">
-				<TextView
+</TableRow>
+<View
+android:layout_height="2dip"
+android:background="#FF909090"/>
+	<TableRow>
+<TextView
 				android:text="@string/cqsn11"
 				android:id="@+id/cpid11"
 				android:layout_width="wrap_content"
@@ -985,22 +890,12 @@
 					
 					
 				</RadioGroup>
-				
-				</LinearLayout>
-				</TableRow>		
-				<TableRow
-				android:layout_width="fill_parent"
-				android:layout_height="50dp"
-				android:layout_marginLeft="10dp"
-				android:layout_marginRight="10dp"
-				android:id="@+id/tableRow1">
-				<LinearLayout
-				android:id="@+id/forgott"
-				android:layout_marginTop="10dp"
-				android:orientation="horizontal"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content">
-				<TextView
+</TableRow>
+<View
+android:layout_height="2dip"
+android:background="#FF909090"/>
+	<TableRow>
+<TextView
 				android:text="@string/cqsn12"
 				android:id="@+id/cpid12"
 				android:layout_width="wrap_content"
@@ -1045,22 +940,12 @@
 					
 					
 				</RadioGroup>
-				
-				</LinearLayout>
-				</TableRow>		
-				<TableRow
-				android:layout_width="fill_parent"
-				android:layout_height="50dp"
-				android:layout_marginLeft="10dp"
-				android:layout_marginRight="10dp"
-				android:id="@+id/tableRow1">
-				<LinearLayout
-				android:id="@+id/forgott"
-				android:layout_marginTop="10dp"
-				android:orientation="horizontal"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content">
-				<TextView
+</TableRow>
+	<View
+android:layout_height="2dip"
+android:background="#FF909090"/>
+	<TableRow>
+	<TextView
 				android:text="@string/cqsn13"
 				android:id="@+id/cpid13"
 				android:layout_width="wrap_content"
@@ -1105,22 +990,12 @@
 					
 					
 				</RadioGroup>
-				
-				</LinearLayout>
-				</TableRow>		
-				<TableRow
-				android:layout_width="fill_parent"
-				android:layout_height="50dp"
-				android:layout_marginLeft="10dp"
-				android:layout_marginRight="10dp"
-				android:id="@+id/tableRow1">
-				<LinearLayout
-				android:id="@+id/forgott"
-				android:layout_marginTop="10dp"
-				android:orientation="horizontal"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content">
-				<TextView
+</TableRow>
+	<View
+android:layout_height="2dip"
+android:background="#FF909090"/>
+	<TableRow>
+	<TextView
 				android:text="@string/cqsn14"
 				android:id="@+id/cpid14"
 				android:layout_width="wrap_content"
@@ -1165,12 +1040,12 @@
 					
 					
 				</RadioGroup>
-				
-			</LinearLayout>
-				</TableRow>		
-
-			</TableLayout>
-			</ScrollView>
+</TableRow>
+	<View
+android:layout_height="2dip"
+android:background="#FF909090"/>
+</TableLayout>
+</ScrollView>
 			<LinearLayout
 				android:id="@+id/Layout_surName"
 				android:layout_width="fill_parent"
@@ -1183,6 +1058,7 @@
 					android:text="Save"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
+					android:enabled="false"
 					android:id="@+id/button1" />
 			</LinearLayout>
 		</LinearLayout>

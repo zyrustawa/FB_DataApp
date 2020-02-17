@@ -1,7 +1,702 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-		<include android:id="@+id/toolbar" layout="@layout/toolbar" />
+<ScrollView 
+android:minWidth="25px"
+android:minHeight="25px"
+android:layout_width="match_parent"
+android:layout_height="fill_parent"
+android:id="@+id/scrollView1" >
+<TableLayout 
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:stretchColumns="1">
+	<TableRow>
+TableLayout is a ViewGroup that displays child View elements in rows and columns.
+Start a new project named HelloTableLayout.
+Open the Resources/Layout/Main.axml file and insert the following:
+<TextView
+android:text=""
+android:padding="3dip"/>
+<TextView
+android:text="Export..."
+android:padding="3dip"/>
+<TextView
+android:text="Ctrl-E"
+android:gravity="right"
+android:padding="3dip"/>
+</TableRow>
+<TableRow>
+				<TextView
+				android:text="@string/cqsn1"
+				android:id="@+id/qsn1"
+				android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="5dp"
+						android:layout_marginTop="10dp"
+						android:textAlignment="center"
+						android:textSize="18sp"
+				        android:clickable="true"
+						android:contextClickable="true"/>
+							<TextView
+				android:text="@string/sqsn1"
+				android:id="@+id/cpid1"
+				android:layout_width="200dp"
+						android:layout_height="wrap_content"
+						android:padding="5dp"
+						android:layout_marginTop="10dp"
+						android:textAlignment="center"
+						android:textSize="18sp"
+				        android:clickable="true"
+						android:contextClickable="true"/>
+				<RadioGroup
+					android:minWidth="25px"
+					android:minHeight="25px"
+					android:orientation="vertical"
+					android:layout_width="wrap_content"
+					android:padding="2dp"
+					android:layout_marginTop="10dp"
+					android:layout_height="wrap_content"
+					android:id="@+id/rbtnqsn1">
+					<RadioButton
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+					
+						android:text="Yes"
+						android:id="@+id/radioButton1" />
+					<RadioButton
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="No"
+						android:id="@+id/radioButton2" />
+					
+					
+				</RadioGroup>
+</TableRow>
+<TableRow>
+	<TextView
+				android:text="@string/cqsn2"
+				android:id="@+id/cpid1"
+				android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="5dp"
+						android:layout_marginTop="10dp"
+						android:textAlignment="center"
+						android:textSize="18sp"
+				        android:clickable="true"
+						android:contextClickable="true"/>
+				<TextView
+				android:text="@string/sqsn2"
+				android:id="@+id/cpid1"
+				android:layout_width="200dp"
+						android:layout_height="wrap_content"
+						android:padding="5dp"
+						android:layout_marginTop="10dp"
+						android:textAlignment="center"
+						android:textSize="18sp"
+				        android:clickable="true"
+						android:contextClickable="true"/>
+				<RadioGroup
+					android:minWidth="25px"
+					android:minHeight="25px"
+					android:orientation="vertical"
+					android:layout_width="wrap_content"
+					android:padding="2dp"
+					android:layout_marginTop="10dp"
+					android:layout_height="wrap_content"
+					android:id="@+id/rbtnqsn2">
+					<RadioButton
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+		
+						android:text="Yes"
+						android:id="@+id/radioButton1" />
+					<RadioButton
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="No"
+						android:id="@+id/radioButton2" />
+					
+					
+				</RadioGroup>
+				
+</TableRow>
+<TableRow>
+<TextView
+				android:text="@string/cqsn3"
+				android:id="@+id/qsn3"
+				android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="5dp"
+						android:layout_marginTop="10dp"
+						android:textAlignment="center"
+						android:textSize="18sp"
+				        android:clickable="true"
+						android:contextClickable="true"/>
+							<TextView
+				android:text="@string/sqsn3"
+				android:id="@+id/cpid3"
+				android:layout_width="200dp"
+						android:layout_height="wrap_content"
+						android:padding="5dp"
+						android:layout_marginTop="10dp"
+						android:textAlignment="center"
+						android:textSize="18sp"
+				        android:clickable="true"
+						android:contextClickable="true"/>
+				<RadioGroup
+					android:minWidth="25px"
+					android:minHeight="25px"
+					android:orientation="vertical"
+					android:layout_width="wrap_content"
+					android:padding="2dp"
+					android:layout_marginTop="10dp"
+					android:layout_height="wrap_content"
+					android:id="@+id/rbtnqsn3">
+					<RadioButton
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+					
+						android:text="Yes"
+						android:id="@+id/radioButton1" />
+					<RadioButton
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="No"
+						android:id="@+id/radioButton2" />
+					
+					
+				</RadioGroup>
+</TableRow>
+<View
+android:layout_height="2dip"
+android:background="#FF909090"/>
+<TableRow>
+<TextView
+				android:text="@string/cqsn4"
+				android:id="@+id/cpid1"
+				android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="5dp"
+						android:layout_marginTop="10dp"
+						android:textAlignment="center"
+						android:textSize="18sp"
+				        android:clickable="true"
+						android:contextClickable="true"/>
+							<TextView
+				android:text="@string/sqsn4"
+				android:id="@+id/cpid1"
+				android:layout_width="200dp"
+						android:layout_height="wrap_content"
+						android:padding="5dp"
+						android:layout_marginTop="10dp"
+						android:textAlignment="center"
+						android:textSize="18sp"
+				        android:clickable="true"
+						android:contextClickable="true"/>
+				<RadioGroup
+					android:minWidth="25px"
+					android:minHeight="25px"
+					android:orientation="vertical"
+					android:layout_width="wrap_content"
+					android:padding="2dp"
+					android:layout_marginTop="10dp"
+					android:layout_height="wrap_content"
+					android:id="@+id/rbtnqsn4">
+					<RadioButton
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						
+						android:text="Yes"
+						android:id="@+id/radioButton1" />
+					<RadioButton
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="No"
+						android:id="@+id/radioButton2" />
+					
+					
+				</RadioGroup>
+				
+</TableRow>
+<TableRow>
+TableLayout is a ViewGroup that displays child View elements in rows and columns.
+Start a new project named HelloTableLayout.
+Open the Resources/Layout/Main.axml file and insert the following:
+	<TextView
+				android:text="@string/cqsn5"
+				android:id="@+id/cpid5"
+				android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="5dp"
+						android:layout_marginTop="10dp"
+						android:textAlignment="center"
+						android:textSize="18sp"
+				        android:clickable="true"
+						android:contextClickable="true"/>
+							<TextView
+				android:text="@string/sqsn5"
+				android:id="@+id/cpid6"
+				android:layout_width="200dp"
+						android:layout_height="wrap_content"
+						android:padding="5dp"
+						android:layout_marginTop="10dp"
+						android:textAlignment="center"
+						android:textSize="18sp"
+				        android:clickable="true"
+						android:contextClickable="true"/>
+				<RadioGroup
+					android:minWidth="25px"
+					android:minHeight="25px"
+					android:orientation="vertical"
+					android:layout_width="wrap_content"
+					android:padding="2dp"
+					android:layout_marginTop="10dp"
+					android:layout_height="wrap_content"
+					android:id="@+id/rbtnqsn5">
+					<RadioButton
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						
+						android:text="Yes"
+						android:id="@+id/radioButton1" />
+					<RadioButton
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="No"
+						android:id="@+id/radioButton2" />
+					
+					
+				</RadioGroup>
+</TableRow>
+<View
+android:layout_height="2dip"
+android:background="#FF909090"/>
+<TableRow>
+<TextView
+					android:text="@string/cqsn6"
+					android:id="@+id/cpid6"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:padding="5dp"
+					android:layout_marginTop="10dp"
+					android:textAlignment="center"
+					android:textSize="18sp"
+					android:clickable="true"
+					android:contextClickable="true"/>
+				<TextView
+					android:text="@string/sqsn6"
+					android:id="@+id/cpid6"
+					android:layout_width="200dp"
+					android:layout_height="wrap_content"
+					android:padding="5dp"
+					android:layout_marginTop="10dp"
+					android:textAlignment="center"
+					android:textSize="18sp"
+					android:clickable="true"
+					android:contextClickable="true"/>
+				<RadioGroup
+					android:minWidth="25px"
+					android:minHeight="25px"
+					android:orientation="vertical"
+					android:layout_width="wrap_content"
+					android:padding="2dp"
+					android:layout_marginTop="10dp"
+					android:layout_height="wrap_content"
+					android:id="@+id/rbtnqsn6">
+					<RadioButton
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					
+					android:text="Yes"
+					android:id="@+id/radioButton1" />
+					<RadioButton
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="No"
+					android:id="@+id/radioButton2" />
+					
+					
+				</RadioGroup>
+</TableRow>
+	<TableRow>
+	<TextView
+					android:text="@string/cqsn7"
+					android:id="@+id/cpid7"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:padding="5dp"
+					android:layout_marginTop="10dp"
+					android:textAlignment="center"
+					android:textSize="18sp"
+					android:clickable="true"
+					android:contextClickable="true"/>
+				<TextView
+					android:text="@string/sqsn7"
+					android:id="@+id/cpid7"
+					android:layout_width="200dp"
+					android:layout_height="wrap_content"
+					android:padding="5dp"
+					android:layout_marginTop="10dp"
+					android:textAlignment="center"
+					android:textSize="18sp"
+				    android:clickable="true"
+					android:contextClickable="true"/>
+				<RadioGroup
+					android:minWidth="25px"
+					android:minHeight="25px"
+					android:orientation="vertical"
+					android:layout_width="wrap_content"
+					android:padding="2dp"
+					android:layout_marginTop="10dp"
+					android:layout_height="wrap_content"
+					android:id="@+id/rbtnqsn7">
+					<RadioButton
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						
+						android:text="Yes"
+						android:id="@+id/radioButton1" />
+					<RadioButton
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="No"
+						android:id="@+id/radioButton2" />
+					
+					
+				</RadioGroup>
+</TableRow>
+	<TableRow>
+<TextView
+				android:text="@string/cqsn8"
+				android:id="@+id/cpid8"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="5dp"
+				android:layout_marginTop="10dp"
+				android:textAlignment="center"
+				android:textSize="18sp"
+				android:clickable="true"
+				android:contextClickable="true"/>
+				<TextView
+				android:text="@string/sqsn8"
+				android:id="@+id/cpid8"
+				android:layout_width="200dp"
+				android:layout_height="wrap_content"
+				android:padding="5dp"
+				android:layout_marginTop="10dp"
+				android:textAlignment="center"
+				android:textSize="18sp"
+				android:clickable="true"
+				android:contextClickable="true"/>
+				<RadioGroup
+					android:minWidth="25px"
+					android:minHeight="25px"
+					android:orientation="vertical"
+					android:layout_width="wrap_content"
+					android:padding="2dp"
+					android:layout_marginTop="10dp"
+					android:layout_height="wrap_content"
+					android:id="@+id/rbtnqsn8">
+					<RadioButton
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						
+						android:text="Yes"
+						android:id="@+id/radioButton1" />
+					<RadioButton
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="No"
+						android:id="@+id/radioButton2" />
+					
+					
+				</RadioGroup>
+</TableRow>
+	<TableRow>
+	<TextView
+				android:text="@string/cqsn9"
+				android:id="@+id/cpid9"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="5dp"
+				android:layout_marginTop="10dp"
+				android:textAlignment="center"
+				android:textSize="18sp"
+				android:clickable="true"
+				android:contextClickable="true"/>
+				<TextView
+				android:text="@string/sqsn9"
+				android:id="@+id/cpid9"
+				android:layout_width="200dp"
+				android:layout_height="wrap_content"
+				android:padding="5dp"
+				android:layout_marginTop="10dp"
+				android:textAlignment="center"
+				android:textSize="18sp"
+				android:clickable="true"
+				android:contextClickable="true"/>
+				<RadioGroup
+				android:minWidth="25px"
+				android:minHeight="25px"
+				android:orientation="vertical"
+				android:layout_width="wrap_content"
+				android:padding="2dp"
+				android:layout_marginTop="10dp"
+				android:layout_height="wrap_content"
+				android:id="@+id/rbtnqsn9">
+				<RadioButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				
+				android:text="Yes"
+				android:id="@+id/radioButton1" />
+				<RadioButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="No"
+				android:id="@+id/radioButton2" />
+					
+					
+				</RadioGroup>
+</TableRow>
+	<TableRow>
+<TextView
+				android:text="@string/cqsn10"
+				android:id="@+id/cpid10"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="5dp"
+				android:layout_marginTop="10dp"
+				android:textAlignment="center"
+				android:textSize="18sp"
+				android:clickable="true"
+				android:contextClickable="true"/>
+				<TextView
+				android:text="@string/sqsn10"
+				android:id="@+id/cpid10"
+				android:layout_width="200dp"
+				android:layout_height="wrap_content"
+				android:padding="5dp"
+				android:layout_marginTop="10dp"
+				android:textAlignment="center"
+				android:textSize="18sp"
+				android:clickable="true"
+				android:contextClickable="true"/>
+				<RadioGroup
+				android:minWidth="25px"
+				android:minHeight="25px"
+				android:orientation="vertical"
+				android:layout_width="wrap_content"
+				android:padding="2dp"
+				android:layout_marginTop="10dp"
+				android:layout_height="wrap_content"
+				android:id="@+id/rbtnqsn10">
+				<RadioButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+			
+				android:text="Yes"
+				android:id="@+id/radioButton1" />
+				<RadioButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="No"
+				android:id="@+id/radioButton2" />
+					
+					
+				</RadioGroup>
+</TableRow>
+	<TableRow>
+<TextView
+				android:text="@string/cqsn11"
+				android:id="@+id/cpid11"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="5dp"
+				android:layout_marginTop="10dp"
+				android:textAlignment="center"
+				android:textSize="18sp"
+				android:clickable="true"
+				android:contextClickable="true"/>
+				<TextView
+				android:text="@string/sqsn11"
+				android:id="@+id/cpid11"
+				android:layout_width="200dp"
+				android:layout_height="wrap_content"
+				android:padding="5dp"
+				android:layout_marginTop="10dp"
+				android:textAlignment="center"
+				android:textSize="18sp"
+				android:clickable="true"
+				android:contextClickable="true"/>
+				<RadioGroup
+				android:minWidth="25px"
+				android:minHeight="25px"
+				android:orientation="vertical"
+				android:layout_width="wrap_content"
+				android:padding="2dp"
+				android:layout_marginTop="10dp"
+				android:layout_height="wrap_content"
+				android:id="@+id/rbtnqsn11">
+				<RadioButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+			
+				android:text="Yes"
+				android:id="@+id/radioButton1" />
+				<RadioButton
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="No"
+				android:id="@+id/radioButton2" />
+					
+					
+				</RadioGroup>
+</TableRow>
+	<TableRow>
+<TextView
+				android:text="@string/cqsn12"
+				android:id="@+id/cpid12"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="5dp"
+				android:layout_marginTop="10dp"
+				android:textAlignment="center"
+				android:textSize="18sp"
+				android:clickable="true"
+				android:contextClickable="true"/>
+				<TextView
+				android:text="@string/sqsn12"
+				android:id="@+id/cpid12"
+				android:layout_width="200dp"
+				android:layout_height="wrap_content"
+				android:padding="5dp"
+				android:layout_marginTop="10dp"
+				android:textAlignment="center"
+				android:textSize="18sp"
+				android:clickable="true"
+				android:contextClickable="true"/>
+				<RadioGroup
+					android:minWidth="25px"
+					android:minHeight="25px"
+					android:orientation="vertical"
+					android:layout_width="wrap_content"
+					android:padding="2dp"
+					android:layout_marginTop="10dp"
+					android:layout_height="wrap_content"
+					android:id="@+id/rbtnqsn12">
+					<RadioButton
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						
+						android:text="Yes"
+						android:id="@+id/radioButton1" />
+					<RadioButton
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="No"
+						android:id="@+id/radioButton2" />
+					
+					
+				</RadioGroup>
+</TableRow>
+	<TableRow>
+	<TextView
+				android:text="@string/cqsn13"
+				android:id="@+id/cpid13"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="5dp"
+				android:layout_marginTop="10dp"
+				android:textAlignment="center"
+				android:textSize="18sp"
+				android:clickable="true"
+				android:contextClickable="true"/>
+				<TextView
+				android:text="@string/sqsn13"
+				android:id="@+id/cpid13"
+				android:layout_width="200dp"
+				android:layout_height="wrap_content"
+				android:padding="5dp"
+				android:layout_marginTop="10dp"
+				android:textAlignment="center"
+				android:textSize="18sp"
+				android:clickable="true"
+				android:contextClickable="true"/>
+				<RadioGroup
+				android:minWidth="25px"
+				android:minHeight="25px"
+				android:orientation="vertical"
+				android:layout_width="wrap_content"
+				android:padding="2dp"
+				android:layout_marginTop="10dp"
+				android:layout_height="wrap_content"
+				android:id="@+id/rbtnqsn13">
+					<RadioButton
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						
+						android:text="Yes"
+						android:id="@+id/radioButton1" />
+					<RadioButton
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="No"
+						android:id="@+id/radioButton2" />
+					
+					
+				</RadioGroup>
+</TableRow>
+	<TableRow>
+	<TextView
+				android:text="@string/cqsn14"
+				android:id="@+id/cpid14"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="5dp"
+				android:layout_marginTop="10dp"
+				android:textAlignment="center"
+				android:textSize="18sp"
+				android:clickable="true"
+				android:contextClickable="true"/>
+				<TextView
+				android:text="@string/sqsn1"
+				android:id="@+id/cpid1"
+				android:layout_width="200dp"
+				android:layout_height="wrap_content"
+				android:padding="5dp"
+				android:layout_marginTop="10dp"
+				android:textAlignment="center"
+				android:textSize="18sp"
+				android:clickable="true"
+				android:contextClickable="true"/>
+				<RadioGroup
+					android:minWidth="25px"
+					android:minHeight="25px"
+					android:orientation="vertical"
+					android:layout_width="wrap_content"
+					android:padding="2dp"
+					android:layout_marginTop="10dp"
+					android:layout_height="wrap_content"
+					android:id="@+id/rbtnqsn14">
+					<RadioButton
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						
+						android:text="Yes"
+						android:id="@+id/radioButton1" />
+					<RadioButton
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="No"
+						android:id="@+id/radioButton2" />
+					
+					
+				</RadioGroup>
+</TableRow>
+</TableLayout>
+</ScrollView>
 </LinearLayout>

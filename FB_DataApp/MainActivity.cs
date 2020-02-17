@@ -42,8 +42,8 @@ namespace FB_DataApp
             //click event for CKT Register
             TextView reg = FindViewById<TextView>(Resource.Id.cktreg);
             reg.Click += Reg_Click;
-            //String sid = DateTime.Now.ToShortDateString();
-          
+            
+
 
         }
 

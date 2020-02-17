@@ -69,6 +69,8 @@
   <!--Start SSQ14 Questions in all languages -->
   <!--SSQ14-->
   <string name="SpstMonth">Muvhiki rapfuura: </string>
+  <string name="sselect">Sarudza: </string>
+  
   <string name="sqsn1">Pane pandaimboona ndichifungisisa kana kufunga zvakawanda </string>
   <string name="sqsn2">Pane pandaimbotadza kuisa pfungwa dzangu pamwechete</string>
   <string name="sqsn3">Pane pandaimboshatirwa kana kuita hasha zvenhando</string>
@@ -108,19 +110,52 @@
   <string name="csessiondate">Session Date</string>
   <string name="csessionnumber">Session Number</string>
   <string name="csessionlocation">Session Location</string>
-  <string name="cqsn1">Question 1</string>
-  <string name="cqsn2">Question 2</string>
-  <string name="cqsn3">Question 3</string>
-  <string name="cqsn4">Question 4</string>
-  <string name="cqsn5">Question 5</string>
-  <string name="cqsn6">Question 6</string>
-  <string name="cqsn7">Question 7</string>
-  <string name="cqsn8">Question 8</string>
-  <string name="cqsn9">Question 9</string>
-  <string name="cqsn10">Question 10</string>
-  <string name="cqsn11">Question 11</string>
-  <string name="cqsn12">Question 12</string>
-  <string name="cqsn13">Question 13</string>
-  <string name="cqsn14">Question 14</string>
+  
+  <string name="cqsn">Mubvunzo</string>
+  <string name="cqsn1"> 1</string>
+  <string name="cqsn2"> 2</string>
+  <string name="cqsn3"> 3</string>
+  <string name="cqsn4"> 4</string>
+  <string name="cqsn5"> 5</string>
+  <string name="cqsn6"> 6</string>
+  <string name="cqsn7"> 7</string>
+  <string name="cqsn8"> 8</string>
+  <string name="cqsn9"> 9</string>
+  <string name="cqsn10"> 10</string>
+  <string name="cqsn11"> 11</string>
+  <string name="cqsn12"> 12</string>
+  <string name="cqsn13"> 13</string>
+  <string name="cqsn14"> 14</string>
   <!--end session-->
+  <!--Clinic details-->
+  <string name="clinicname">Clinic Name</string>
+  <string name="clinicid">Clinic ID</string>
+  <string name="clinic">Clinic Details</string>
+  <string name="Districtname">District</string>
+  <string-array name="District">
+    
+    <item name="select">Select District</item>
+    <item name="harare">Harare</item>
+      <item name="Gweru">Gweru</item>
+      <item name="Chitungwiza">Chitungwiza</item>
+      
+  </string-array>
+  <!--end clinic details-->
+  <!--Workplace -->
+  <string name="wkpid">WorkPlace ID</string>
+  <string name="wkp">Workplace Details</string>
+  <string name="wkpname">WorkPlace Name</string>
+  <!--end Workplace -->
+  <!--Other settings-->
+   <string name="other">Other Settings</string>
+   <string name="backup">BackUp</string>
+   <string name="auto">Auto</string>
+   <string name="Manual">Manual</string>
+  <!--end Other settings-->
+  <!--Admin settings-->
+     <string name="admin">Admin Settings</string>
+   <string name="url">Url</string>
+   <string name="username">Username</string>
+   <string name="password">Password</string>
+  <!--end admin settings-->
 </resources>

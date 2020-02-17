@@ -3,22 +3,261 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-			<include android:id="@+id/toolbar" layout="@layout/toolbar" />
+	<include android:id="@+id/toolbar" layout="@layout/toolbar" />
+
 	<ScrollView
 		android:minWidth="25px"
 		android:minHeight="25px"
 		android:layout_width="match_parent"
 		android:layout_height="fill_parent"
 		android:id="@+id/scrollView1" >
-		<RelativeLayout
+		<LinearLayout
+			android:orientation="vertical"
 			android:minWidth="25px"
 			android:minHeight="25px"
 			android:layout_width="match_parent"
-			android:layout_height="match_parent"
-			android:id="@+id/relativeLayout1" >
-			
-
-		</RelativeLayout>
-
+			android:layout_height="fill_parent"
+			android:id="@+id/relativeLayout1" > 
+			<LinearLayout
+				android:orientation="horizontal"
+				android:minWidth="25px"
+				android:minHeight="25px"
+				android:layout_width="match_parent"
+				android:layout_height="30dp"
+				android:id="@+id/relativeLayout1">
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="30dp"
+					android:text="@string/clinic"
+					android:layout_marginTop="0dp"
+					android:textSize="20sp"
+					android:textColor="@color/blue"
+					android:layout_gravity="center"
+					android:contextClickable="false"
+					android:id="@+id/imageView2" />
+			</LinearLayout>
+			<LinearLayout
+				android:id="@+id/Layout_userame"
+				android:layout_width="fill_parent"
+				android:layout_height="50sp"
+				android:orientation="horizontal"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+			>
+				<TextView
+					android:id="@+id/cid"
+					android:layout_width="150dp"
+					android:layout_height="fill_parent"
+					android:text="@string/clinicid"
+					android:textSize="18dp"
+					android:textColor="@android:color/black"
+					android:layout_marginTop="3sp"
+					/>
+				<EditText
+					android:id="@+id/clinicid"
+					android:layout_width="match_parent"
+					android:layout_height="fill_parent"
+					android:hint="Clinic ID"
+					android:inputType="number"
+					android:textAlignment="center"
+					android:textColor="@android:color/black"
+					android:numeric="integer" 
+					/>
+			</LinearLayout>
+			<LinearLayout
+				android:id="@+id/Layout_userame"
+				android:layout_width="fill_parent"
+				android:layout_height="50sp"
+				android:orientation="horizontal"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+			>
+				<TextView
+					android:id="@+id/cname"
+					android:layout_width="150dp"
+					android:layout_height="fill_parent"
+					android:text="@string/clinicname"
+					android:textSize="18dp"
+					android:layout_marginTop="3sp"
+					android:textColor="@android:color/black"
+					/>
+				<EditText
+					android:id="@+id/clinicname"
+					android:layout_width="match_parent"
+					android:layout_height="fill_parent"
+					android:hint="@string/clinicname"
+					android:textColor="@android:color/black"
+					android:textAlignment="center"
+					/>
+			</LinearLayout>
+			<LinearLayout
+				android:id="@+id/Layout_userame"
+				android:layout_width="fill_parent"
+				android:layout_height="50sp"
+				android:orientation="horizontal"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+			>
+				<TextView
+					android:id="@+id/cidd"
+					android:layout_width="150dp"
+					android:layout_height="fill_parent"
+					android:text="@string/Districtname"
+					android:textSize="18dp"
+					android:layout_marginTop="3sp"
+					android:textColor="@android:color/black"
+					/>
+				<TextView
+					android:id="@+id/District1243"
+					android:layout_width="150dp"
+					android:layout_height="fill_parent"
+					android:text="@string/Districtname"
+					android:textSize="18dp"
+					android:layout_marginTop="3sp"
+					android:textColor="@android:color/black"
+					/>
+				<Spinner
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:id="@+id/spinner1" />
+			</LinearLayout>
+			<LinearLayout
+				android:orientation="horizontal"
+				android:minWidth="25px"
+				android:minHeight="25px"
+				android:layout_width="match_parent"
+				android:layout_height="30dp"
+				android:id="@+id/relativeLayout1">
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="30dp"
+					android:text="@string/wkp"
+					android:layout_marginTop="0dp"
+					android:textSize="20sp"
+					android:textColor="@color/blue"
+					android:layout_gravity="center"
+					android:contextClickable="false"
+					android:id="@+id/imageView2" />
+			</LinearLayout>
+			<LinearLayout
+				android:id="@+id/Layout_userame"
+				android:layout_width="fill_parent"
+				android:layout_height="50sp"
+				android:orientation="horizontal"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+			>
+				<TextView
+					android:id="@+id/wid"
+					android:layout_width="150dp"
+					android:layout_height="fill_parent"
+					android:text="@string/wkpid"
+					android:textColor="@android:color/black"
+					android:textSize="18dp"
+					android:layout_marginTop="3sp"
+					/>
+				<EditText
+					android:id="@+id/wkpid"
+					android:layout_width="match_parent"
+					android:layout_height="fill_parent"
+					android:hint="@string/wkpid"
+					android:inputType="number"
+					android:textAlignment="center"
+					android:numeric="integer" 
+					/>
+			</LinearLayout>
+			<LinearLayout
+				android:id="@+id/Layout_userame"
+				android:layout_width="fill_parent"
+				android:layout_height="50sp"
+				android:orientation="horizontal"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+			>
+				<TextView
+					android:id="@+id/wkname"
+					android:layout_width="150dp"
+					android:layout_height="fill_parent"
+					android:text="@string/wkpname"
+					android:textSize="18dp"
+					android:textColor="@android:color/black"
+					android:layout_marginTop="3sp"
+					
+					/>
+				<EditText
+					android:id="@+id/wkpname"
+					android:layout_width="match_parent"
+					android:layout_height="fill_parent"
+					android:hint="@string/wkpname"
+					android:textAlignment="center"
+					/>
+			</LinearLayout>
+			<LinearLayout
+				android:orientation="horizontal"
+				android:minWidth="25px"
+				android:minHeight="25px"
+				android:layout_width="match_parent"
+				android:layout_height="30dp"
+				android:id="@+id/relativeLayout1">
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="30dp"
+					android:text="@string/other"
+					android:layout_marginTop="0dp"
+					android:textSize="20sp"
+					android:textColor="@color/blue"
+					android:layout_gravity="center"
+					android:contextClickable="false"
+					android:id="@+id/imageView2" />
+			</LinearLayout>
+			<LinearLayout
+				android:id="@+id/Layout_userame"
+				android:layout_width="fill_parent"
+				android:layout_height="50sp"
+				android:orientation="horizontal"
+				android:layout_marginLeft="20dp"
+				android:layout_marginRight="10dp"
+			>
+				<TextView
+					android:id="@+id/wid"
+					android:layout_width="150dp"
+					android:layout_height="fill_parent"
+					android:text="@string/backup"
+					android:textSize="18dp"
+					android:layout_marginTop="3sp"
+					android:textColor="@android:color/black"
+					/>
+				<Switch
+					android:layout_width="match_parent"
+					android:checked="true"
+					android:textOn="@string/auto"
+					android:textOff="@string/Manual"
+					android:layout_height="match_parent"
+					android:id="@+id/switch1"
+					 />
+			</LinearLayout>
+			<LinearLayout
+				android:id="@+id/Layout_userame"
+				android:layout_width="fill_parent"
+				android:layout_height="50sp"
+				android:orientation="horizontal"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+			>
+				<Button
+					android:text="Save"
+					android:layout_width="200dp"
+					android:layout_height="wrap_content"
+					android:id="@+id/button1" />
+				<Button
+					android:text="Set"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:id="@+id/button2" />
+			</LinearLayout>
+		</LinearLayout>
+		
+         
 	</ScrollView>
+		
 </LinearLayout>

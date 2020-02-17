@@ -31,6 +31,8 @@ namespace FB_DataApp.Activities
                 var option = FindViewById<RadioButton>(answer1.CheckedRadioButtonId).Text;
                 gender = option;
             };
+            TextView cid = FindViewById<TextView>(Resource.Id.cid);
+            cid.Text = Helpers.Settings.ClinicId;
         }
        
 

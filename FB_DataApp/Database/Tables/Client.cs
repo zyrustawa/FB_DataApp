@@ -13,7 +13,7 @@ using SQLite;
 
 namespace FB_DataApp.Database.Tables
 {
-    class Client
+   public class Client
     {
         [PrimaryKey]
         public int Id { get; set; }

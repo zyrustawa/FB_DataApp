@@ -17,15 +17,47 @@ namespace FB_DataApp.Helpers
             return CrossSettings.Current;
         }
     }
+        #region general settings
+        //clinic id
+        private const string ClinicIDKey = "Clinic_id";
+        private static readonly string ClinicIDDefault = string.Empty;
+        //clinic name
+        private const string ClinicnameKey = "Clinic_name";
+        private static readonly string ClinicnameDefault = string.Empty;
+        //district
+        private const string DistrictKey = "District";
+        private static readonly string DistrictDefault = string.Empty;
+        //Workplace id
+        private const string WKPKey = "WKP_id";
+        private static readonly string WKPDefault = string.Empty;
+        //Workplace id
+        private const string WKPnameKey = "WKP_name";
+        private static readonly string WKPnameDefault = string.Empty;
+        //Back Up
+        private const string BKupKey = "BKup_id";
+        private static readonly string BKupDefault = string.Empty;
+        #endregion
+        #region admin settings
+        //url
+        private const string URLKey = "URL";
+        private static readonly string URLDefault = string.Empty;
 
-    #region Setting Constants
+        //username
+        private const string UsernameKey = "Username";
+        private static readonly string UsernameDefault = string.Empty;
+
+        //password
+        private const string PasswordKey = "Password";
+        private static readonly string PasswordDefault = string.Empty;
+        #endregion
+        #region Setting Constants
         //default
         private const string SettingsKey = "settings_key";
         private static readonly string SettingsDefault = string.Empty;
         //Pid
         private const string PIDKey = "PID";
         private static readonly string PIDDefault = string.Empty;
-        //Pid
+        //Lay Health Worker ID
         private const string LHWIDKey = "LHWID";
         private static readonly string LHWIDDefault = string.Empty;
         //clinic id
@@ -127,11 +159,11 @@ namespace FB_DataApp.Helpers
     {
         get
         {
-            return AppSettings.GetValueOrDefault(LHWID, LHWIDDefault);
+            return AppSettings.GetValueOrDefault(LHWIDKey, LHWIDDefault);
         }
         set
         {
-            AppSettings.AddOrUpdateValue(PIDKey, value);
+            AppSettings.AddOrUpdateValue(LHWIDKey, value);
         }
     }
         public static string CID
@@ -354,6 +386,105 @@ namespace FB_DataApp.Helpers
                 AppSettings.AddOrUpdateValue(Password, value);
             }
         }
-        
+        //general settings
+        public static string ClinicId
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault(ClinicIDKey,ClinicIDDefault);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(ClinicIDKey, value);
+            }
+        }
+        public static string Workplace
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault(WKPKey, WKPDefault);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(WKPKey, value);
+            }
+        }
+        public static string BackUp
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault(BKupKey, BKupDefault);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(BKupKey, value);
+            }
+        }
+        public static string ClinicName
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault(ClinicnameKey, ClinicnameDefault);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(ClinicnameKey, value);
+            }
+        }
+        public static string District
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault(DistrictKey, DistrictDefault);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(DistrictKey, value);
+            }
+        }
+        public static string WkpName
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault(WKPnameKey, WKPnameDefault);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(WKPnameKey, value);
+            }
+        }
+        public static string URL
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault(URLKey, URLDefault);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(URLKey, value);
+            }
+        }
+        public static string UrlUsername
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault(UsernameKey, UsernameDefault);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(UsernameKey, value);
+            }
+        }
+        public static string UrlPassword
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault(PasswordKey, PasswordDefault);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(PasswordKey, value);
+            }
+        }
     }
 }

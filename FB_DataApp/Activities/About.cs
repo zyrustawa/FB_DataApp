@@ -23,9 +23,9 @@ namespace FB_DataApp.Activities
 
             // Create your application here
             SetContentView(Resource.Layout.About);
-            var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-            SupportActionBar.Title = "Data-Collect: About";
+            //var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+            //SetSupportActionBar(toolbar);
+            //SupportActionBar.Title = "Data-Collect: About";
         }
     }
 }

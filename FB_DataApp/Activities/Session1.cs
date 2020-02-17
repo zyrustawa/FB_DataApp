@@ -11,6 +11,7 @@ using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using FB_DataApp.Database.Crud;
+using FB_DataApp.Database.Tables;
 
 namespace FB_DataApp.Activities
 {
@@ -19,6 +20,9 @@ namespace FB_DataApp.Activities
     {
         private String gender, slocation, qsn1, qsn2, qsn3, qsn4, qsn5, qsn6, qsn7, qsn8, qsn9, qsn10, qsn11, qsn12, qsn13, qsn14;
         String lhwid = "";
+        EditText id, cname, dob, dos, number,cid,lid;
+        RadioGroup radioGroup;
+        Button abc;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -30,11 +34,15 @@ namespace FB_DataApp.Activities
             SetSupportActionBar(toolbar);
             SupportActionBar.Title = "Data-Collect: New Client";
 
+             cid = FindViewById<EditText>(Resource.Id.account1 );
+            cid.Text = Helpers.Settings.ClinicId;
+             lid = FindViewById<EditText>(Resource.Id.account2);
+            lid.Text = Helpers.Settings.LHWID;
             //click save
-            Button abc = FindViewById<Button>(Resource.Id.button1);
+             abc = FindViewById<Button>(Resource.Id.button1);
             abc.Click += Abc_Click;
             //gender
-            RadioGroup radioGroup = FindViewById<RadioGroup>(Resource.Id.rbtngender);
+             radioGroup = FindViewById<RadioGroup>(Resource.Id.rbtngender);
             radioGroup.CheckedChange += delegate {
                 var option = FindViewById<RadioButton>(radioGroup.CheckedRadioButtonId).Text;
                 gender = option;
@@ -130,18 +138,44 @@ namespace FB_DataApp.Activities
                 var option = FindViewById<RadioButton>(answer14.CheckedRadioButtonId).Text;
                 qsn14 = option;
             };
+            // Client id check
+           
+             id = FindViewById<EditText>(Resource.Id.account3);
+             cname = FindViewById<EditText>(Resource.Id.name);
+             dob = FindViewById<EditText>(Resource.Id.dob);
+             dos = FindViewById<EditText>(Resource.Id.dos);
+             number = FindViewById<EditText>(Resource.Id.number);
+            id.TextChanged += Id_TextChanged;
+        }
 
+        private void Id_TextChanged(object sender, Android.Text.TextChangedEventArgs e)
+        {
+            
+            Select select = new Select();
+            List<Client> clients = select.MyClient(id.Text, "ClientID");
+            if(clients.Count==1)
+            {
+                foreach(Client cli in clients)
+                {
+                    cname.Text = cli.Name;
+                    dob.Text = cli.Dob;
+                   
+                }
+                abc.Enabled = false;
+            }
+            else
+            {
+                cname.Text = "";
+                dob.Text = "";
+                abc.Enabled = true;
+            }
         }
 
         private void Abc_Click(object sender, EventArgs e)
         {
             try
             {
-                EditText id = FindViewById<EditText>(Resource.Id.account3);
-                EditText cname = FindViewById<EditText>(Resource.Id.name);
-                EditText dob = FindViewById<EditText>(Resource.Id.dob);
-                EditText dos = FindViewById<EditText>(Resource.Id.dos);
-                EditText number = FindViewById<EditText>(Resource.Id.number);
+               
                 if(id.Text=="")
                 {
                     Toast.MakeText(this, "Enter client id", ToastLength.Short).Show();
@@ -224,8 +258,9 @@ namespace FB_DataApp.Activities
                 }
                 else
                 {
-                    String sid = DateTime.Now.ToShortDateString()+id.Text;
-                    String date = DateTime.Now.ToShortTimeString();
+                   
+                    String date = dos.Text;
+                    String sid = DateTime.Now.ToShortDateString() + cid.Text + "-" + lid.Text + "-" + id.Text;
                     string [] client={id.Text,cname.Text,dob.Text,gender, date, "0" };
                     string[] session = {sid,number.Text,slocation,id.Text,lhwid,"0"};
                     string[] clientsession = {sid,qsn1,qsn2,qsn3,qsn4,qsn5,qsn6,qsn7,qsn8,qsn9,qsn10,qsn11,qsn12,qsn13,qsn14, date,"0" };
@@ -290,5 +325,6 @@ namespace FB_DataApp.Activities
             }
            
         }
+        
     }
 }
