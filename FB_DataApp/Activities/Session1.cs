@@ -23,6 +23,7 @@ namespace FB_DataApp.Activities
         EditText id, cname, dob, dos, number,cid,lid;
         RadioGroup radioGroup;
         Button abc;
+        int count =0,actual=0;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -146,7 +147,11 @@ namespace FB_DataApp.Activities
              dos = FindViewById<EditText>(Resource.Id.dos);
              number = FindViewById<EditText>(Resource.Id.number);
             id.TextChanged += Id_TextChanged;
-        }
+             count = new Select().MyCount("Client", "0", "Status");
+            actual = count == 0 ? 1 : count + 1;
+            id.Text = actual.ToString();
+
+        }   
 
         private void Id_TextChanged(object sender, Android.Text.TextChangedEventArgs e)
         {

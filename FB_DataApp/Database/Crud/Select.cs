@@ -150,7 +150,31 @@ namespace FB_DataApp.Database.Crud
             }
             return code;
         }
+        public int CheckClient1(String[] args)
+        {
 
+            try
+            {
+                List<Client> mList = db.Query<Client>("select * from Client where ClientID=? and Name=? and Dob=? and Gender=?", args[0], args[1], args[2], args[3]).OrderBy(x => x.Id).ToList();
+                if (mList.Count == 1)
+                { 
+                            code = 100;
+                  
+                }
+                else
+                {
+                    code = 1;// client details in the database
+                }
+                //Log.Info("client-count", "number of client " + mList.Count);
+
+            }
+            catch (Exception e)
+            {
+                code = 0;//Error while processing the transaction
+                Log.Error("Database-CheckClient-Error", "Error " + e.Message);
+            }
+            return code;
+        }
         public int ChecKSession(String[] args)
         {
 
@@ -232,6 +256,29 @@ namespace FB_DataApp.Database.Crud
                 else
                 {
                     code = 1;//no Layhealthworker details in the database
+                }
+
+            }
+            catch (Exception e)
+            {
+                code = 0;//Error while processing the transaction
+                Log.Error("Database-CheckClientSession-Error", "Error " + e.Message);
+            }
+            return code;
+        }
+        public int CheckClientSession1(String[] args)
+        {
+
+            try
+            {
+                List<ClientSession> abc = db.Query<ClientSession>("select * from ClientSession where SessionID=? and Date1=?", args[0], args[16]).OrderBy(x => x.Id).ToList();
+                if (abc.Count >0)
+                {                   
+                            code = 200;
+                }
+                else
+                {
+                    code = 100;//no Layhealthworker details in the database
                 }
 
             }
@@ -402,11 +449,30 @@ namespace FB_DataApp.Database.Crud
         {
             int zero=0;
             String sessionid = "";
-            List<Client> client = new List<Client>();
+           // List<Client> client = new List<Client>();
             try
             {
                 // var stocksStartingWithA = db.Query<Client>("SELECT * FROM Client WHERE "+column+" = ?", value);
                 var stocksStartingWithA = db.Query<Session>("SELECT * FROM Session WHERE "+column+"= ?", value);
+                zero = stocksStartingWithA.Count;
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("error-query " + ex.Message);
+            }
+            return zero;
+        }
+        public int MyCount(String table,String value, string column)
+        {
+            int zero = 0;
+            String sessionid = "";
+            // List<Client> client = new List<Client>();
+            try
+            {
+                // var stocksStartingWithA = db.Query<Client>("SELECT * FROM Client WHERE "+column+" = ?", value);
+                var stocksStartingWithA = db.Query<Session>("SELECT * FROM "+table+" WHERE " + column + "= ?", value);
                 zero = stocksStartingWithA.Count;
 
 

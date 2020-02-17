@@ -48,8 +48,9 @@ namespace FB_DataApp.Activities
             mylist = FindViewById<ListView>(Resource.Id.listView1);
             mylist.Adapter = new MyCustomListAdapter(abc.Users);
             mylist.ItemClick += Mylist_ItemClick;
+
+            //  Toast.MakeText(this, "count " + new Select().AllClients(), ToastLength.Long).Show();
             
-          //  Toast.MakeText(this, "count " + new Select().AllClients(), ToastLength.Long).Show();
 
             Button button1 = FindViewById<Button>(Resource.Id.button1);
             button1.Click += Button1_Click;
@@ -171,27 +172,36 @@ namespace FB_DataApp.Activities
                     string[] ckt = { cid.Text + "-" + LHWid.Text + "-" + pid.Text, da.Text, "Community", "1" };
                     int isa = insert.CktRegister(ckt);
                     int check = select.CheckCKT(ckt);
-                    if(isa.Equals(100))
+                    int count = select.MyCount("Session", pid.Text, "ClientID");
+                    if(int.Parse(Helpers.Settings.CKT)>count || int.Parse(Helpers.Settings.CKT) > count)
                     {
-                        Toast.MakeText(this, "CKT data saved", ToastLength.Long).Show();
-                    }
-                    else if(isa.Equals(200) || check.Equals(200))
-                    {
-                        Toast.MakeText(this, "Data already exits for this person", ToastLength.Long).Show();
-                    }
-                    else if (isa.Equals(0))
-                    {
-                        Toast.MakeText(this, "Invalid method arguments", ToastLength.Long).Show();
-                    }
-                    else if (check.Equals(0) || isa.Equals(201))
-                    {
-                        Toast.MakeText(this, "Database Error", ToastLength.Long).Show();
-                    }
+                        if (isa.Equals(100))
+                        {
+                            Toast.MakeText(this, "CKT data saved", ToastLength.Long).Show();
+                        }
+                        else if (isa.Equals(200) || check.Equals(200))
+                        {
+                            Toast.MakeText(this, "Data already exits for this person", ToastLength.Long).Show();
+                        }
+                        else if (isa.Equals(0))
+                        {
+                            Toast.MakeText(this, "Invalid method arguments", ToastLength.Long).Show();
+                        }
+                        else if (check.Equals(0) || isa.Equals(201))
+                        {
+                            Toast.MakeText(this, "Database Error", ToastLength.Long).Show();
+                        }
 
+                        else
+                        {
+                            Toast.MakeText(this, "Uknown error " + isa, ToastLength.Long).Show();
+                        }
+                    }
                     else
                     {
-                        Toast.MakeText(this, "Uknown error "+isa, ToastLength.Long).Show();
+                        Toast.MakeText(this, "Session count less than minimum", ToastLength.Long).Show();
                     }
+                    
                 }
             }
             catch(Exception ex)

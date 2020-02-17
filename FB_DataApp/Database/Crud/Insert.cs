@@ -265,7 +265,7 @@ namespace FB_DataApp.Database.Crud
             try
             {
                 Select select = new Select();
-                int ex = select.CheckClientSession(args);
+                int ex = select.CheckClientSession1(args);
                 if (args.Length == 17)
                 {
                     if (ex == 1 || ex == 100)

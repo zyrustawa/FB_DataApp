@@ -55,11 +55,13 @@ namespace FB_DataApp.Activities
             EditText cname = FindViewById<EditText>(Resource.Id.clinicname);
             EditText wkpid = FindViewById<EditText>(Resource.Id.wkpid);
             EditText wkpname = FindViewById<EditText>(Resource.Id.wkpname);
+            EditText ckt = FindViewById<EditText>(Resource.Id.CktLimit);
+
             id.Text = Helpers.Settings.ClinicId;
             cname.Text = Helpers.Settings.ClinicName;
             wkpid.Text = Helpers.Settings.Workplace;
             wkpname.Text = Helpers.Settings.WkpName;
-            
+            ckt.Text = Helpers.Settings.CKT;
            
 
         }
@@ -71,6 +73,8 @@ namespace FB_DataApp.Activities
 
         private void Reset_Click(object sender, EventArgs e)
         {
+            EditText ckt = FindViewById<EditText>(Resource.Id.CktLimit);
+
             EditText id = FindViewById<EditText>(Resource.Id.clinicid);
             EditText cname = FindViewById<EditText>(Resource.Id.clinicname);
             EditText wkpid = FindViewById<EditText>(Resource.Id.wkpid);
@@ -92,7 +96,9 @@ namespace FB_DataApp.Activities
                     Helpers.Settings.WkpName = wkpname.Text;
                     Helpers.Settings.Workplace = wkpid.Text;
                     Helpers.Settings.BackUp = backup;
+                    Helpers.Settings.CKT = ckt.Text;
                     dis.Text = Helpers.Settings.District;
+
                     Toast.MakeText(this, "General settings set", ToastLength.Long).Show();
                 }
                 else

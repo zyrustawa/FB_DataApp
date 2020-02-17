@@ -18,7 +18,7 @@ namespace FB_DataApp.Activities
     [Activity(Label = "FollowUpSession")]
     public class FollowUpSession : AppCompatActivity
     {
-       
+        int count = 0, actual = 0;
         private String slocation, qsn1, qsn2, qsn3, qsn4, qsn5, qsn6, qsn7, qsn8, qsn9, qsn10, qsn11, qsn12, qsn13, qsn14;
         String lhwid = "",f_up="";
     
@@ -49,7 +49,7 @@ namespace FB_DataApp.Activities
             //click save
              abc = FindViewById<Button>(Resource.Id.button1);
             abc.Click += Abc_Click;
-          
+
             //gender
             //RadioGroup radioGroup = FindViewById<RadioGroup>(Resource.Id.rbtngender);
             //radioGroup.CheckedChange += delegate {
@@ -57,6 +57,7 @@ namespace FB_DataApp.Activities
             //    gender = option;
             //};
             //location
+            f_up=Intent.GetStringExtra("arg") ?? "0";
             RadioGroup loc = FindViewById<RadioGroup>(Resource.Id.radioGroup2);
             loc.CheckedChange += delegate {
                 var option = FindViewById<RadioButton>(loc.CheckedRadioButtonId).Text;
@@ -153,6 +154,7 @@ namespace FB_DataApp.Activities
             dos = FindViewById<EditText>(Resource.Id.dos);
             number = FindViewById<EditText>(Resource.Id.number);
             gender = FindViewById<EditText>(Resource.Id.gender);
+           // cname.Text = f_up;
             //clinic and lhw id 
 
             EditText cl = FindViewById<EditText>(Resource.Id.account1);
@@ -169,8 +171,10 @@ namespace FB_DataApp.Activities
             textView.Adapter = adapter;
             
             textView.TextChanged += TextView_TextChanged;
-       
+
             //id.TextChanged += Id_TextChanged;
+           
+
         }
 
         private void TextView_TextChanged(object sender, Android.Text.TextChangedEventArgs e)
@@ -185,6 +189,9 @@ namespace FB_DataApp.Activities
                 dob.Text = clients[0].Dob;
                 gender.Text = clients[0].Gender;
                 abc.Enabled = true;
+                count = new Select().MyCount("Session", id.Text, "ClientID");
+                actual = count == 0 ? 1 : count + 1;
+                number.Text = actual.ToString();
             }
             else
             {
@@ -193,6 +200,7 @@ namespace FB_DataApp.Activities
                 number.Text ="";
                 gender.Text = "";
                 abc.Enabled = false;
+                number.Text = "";
             }
         }
 
@@ -317,17 +325,18 @@ namespace FB_DataApp.Activities
                 else
                 {
                     String sid = DateTime.Now.ToShortDateString() + id.Text;
-                    String date = DateTime.Now.ToShortTimeString();
+                    String date = dos.Text;
                     string[] client = { id.Text, cname.Text, dob.Text, gender.Text, date, "0" };
                    
                     Insert abc = new Insert();
                     Select sel = new Select();
                     status = sel.CheckStatus("Session", id.Text, "ClientID")+1;
+                
                     string[] session = { sid, number.Text, slocation, id.Text, lhwid, status.ToString()};
-                    string[] clientsession = { sid, qsn1, qsn2, qsn3, qsn4, qsn5, qsn6, qsn7, qsn8, qsn9, qsn10, qsn11, qsn12, qsn13, qsn14, date, stat.ToString() };
-                    int a = sel.CheckClient(client);
+                    string[] clientsession = { sid, qsn1, qsn2, qsn3, qsn4, qsn5, qsn6, qsn7, qsn8, qsn9, qsn10, qsn11, qsn12, qsn13, qsn14, date, f_up };
+                    int a = sel.CheckClient1(client);
                     int b = abc.Session1(session), c = abc.ClientSession(clientsession);
-                    if (a == 2 || a==3)
+                    if (a ==100)
                     {
                         if (c == 100)
                         {

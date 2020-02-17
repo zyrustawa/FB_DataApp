@@ -192,6 +192,53 @@
 					android:textAlignment="center"
 					/>
 			</LinearLayout>
+					<LinearLayout
+				android:orientation="horizontal"
+				android:minWidth="25px"
+				android:minHeight="25px"
+				android:layout_width="match_parent"
+				android:layout_height="30dp"
+				android:id="@+id/relativeLayout1">
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="30dp"
+					android:text="Circle Kubatana Tose"
+					android:layout_marginTop="0dp"
+					android:textSize="20sp"
+					android:textColor="@color/blue"
+					android:layout_gravity="center"
+					android:contextClickable="false"
+					android:id="@+id/imageView2" />
+			</LinearLayout>
+			
+			<LinearLayout
+				android:id="@+id/Layout_userame"
+				android:layout_width="fill_parent"
+				android:layout_height="50sp"
+				android:orientation="horizontal"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+			>
+				<TextView
+					android:id="@+id/wkname"
+					android:layout_width="150dp"
+					android:layout_height="fill_parent"
+					android:text="Number Of Sessions"
+					android:textSize="18dp"
+					
+					android:textColor="@android:color/black"
+					android:layout_marginTop="3sp"
+					
+					/>
+				<EditText
+					android:id="@+id/CktLimit"
+					android:layout_width="match_parent"
+					android:layout_height="fill_parent"
+					android:hint="Limit to get into CKT"
+					android:textAlignment="center"
+					/>
+			</LinearLayout>
+
 			<LinearLayout
 				android:orientation="horizontal"
 				android:minWidth="25px"

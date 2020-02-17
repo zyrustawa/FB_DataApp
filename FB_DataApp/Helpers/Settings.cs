@@ -3,20 +3,20 @@ using Plugin.Settings.Abstractions;
 
 namespace FB_DataApp.Helpers
 {
-  /// <summary>
-  /// This is the Settings static class that can be used in your Core solution or in any
-  /// of your client applications. All settings are laid out the same exact way with getters
-  /// and setters. 
-  /// </summary>
-  public static class Settings
-{
-    private static ISettings AppSettings
+    /// <summary>
+    /// This is the Settings static class that can be used in your Core solution or in any
+    /// of your client applications. All settings are laid out the same exact way with getters
+    /// and setters. 
+    /// </summary>
+    public static class Settings
     {
-        get
+        private static ISettings AppSettings
         {
-            return CrossSettings.Current;
+            get
+            {
+                return CrossSettings.Current;
+            }
         }
-    }
         #region general settings
         //clinic id
         private const string ClinicIDKey = "Clinic_id";
@@ -36,6 +36,9 @@ namespace FB_DataApp.Helpers
         //Back Up
         private const string BKupKey = "BKup_id";
         private static readonly string BKupDefault = string.Empty;
+        //Back Up
+        private const string CKTKey = "CKT_id";
+        private static readonly string CKTDefault = string.Empty;
         #endregion
         #region admin settings
         //url
@@ -77,7 +80,7 @@ namespace FB_DataApp.Helpers
         private static readonly string answer2 = string.Empty;
         //answer 3
         private const string qsn3 = "Qsn3";
-        private static readonly string answer3= string.Empty;
+        private static readonly string answer3 = string.Empty;
         //answer 4
         private const string qsn4 = "Qsn4";
         private static readonly string answer4 = string.Empty;
@@ -134,71 +137,71 @@ namespace FB_DataApp.Helpers
         private static readonly string MyNumber = string.Empty;
 
         public static string GeneralSettings
-    {
-        get
         {
-            return AppSettings.GetValueOrDefault(SettingsKey, SettingsDefault);
+            get
+            {
+                return AppSettings.GetValueOrDefault(SettingsKey, SettingsDefault);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(SettingsKey, value);
+            }
         }
-        set
-        {
-            AppSettings.AddOrUpdateValue(SettingsKey, value);
-        }
-    }
         public static string PID
-    {
-        get
         {
-            return AppSettings.GetValueOrDefault(PIDKey, PIDDefault);
+            get
+            {
+                return AppSettings.GetValueOrDefault(PIDKey, PIDDefault);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(PIDKey, value);
+            }
         }
-        set
-        {
-            AppSettings.AddOrUpdateValue(PIDKey, value);
-        }
-    }
         public static string LHWID
-    {
-        get
         {
-            return AppSettings.GetValueOrDefault(LHWIDKey, LHWIDDefault);
+            get
+            {
+                return AppSettings.GetValueOrDefault(LHWIDKey, LHWIDDefault);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(LHWIDKey, value);
+            }
         }
-        set
-        {
-            AppSettings.AddOrUpdateValue(LHWIDKey, value);
-        }
-    }
         public static string CID
-    {
-        get
         {
-            return AppSettings.GetValueOrDefault(CLIDKey, CLIDDefault);
+            get
+            {
+                return AppSettings.GetValueOrDefault(CLIDKey, CLIDDefault);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(CLIDKey, value);
+            }
         }
-        set
-        {
-            AppSettings.AddOrUpdateValue(CLIDKey, value);
-        }
-    }
         public static string CLHWPass
         {
-        get
-        {
-            return AppSettings.GetValueOrDefault(LHWPass, LHWPassDefault);
+            get
+            {
+                return AppSettings.GetValueOrDefault(LHWPass, LHWPassDefault);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(LHWPass, value);
+            }
         }
-        set
-        {
-            AppSettings.AddOrUpdateValue(LHWPass, value);
-        }
-    }
         public static string Language
-    {
-        get
         {
-            return AppSettings.GetValueOrDefault(Languagekey, MyLanguage);
+            get
+            {
+                return AppSettings.GetValueOrDefault(Languagekey, MyLanguage);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(Languagekey, value);
+            }
         }
-        set
-        {
-            AppSettings.AddOrUpdateValue(Languagekey, value);
-        }
-    }
         public static string ssq1
         {
             get
@@ -391,7 +394,7 @@ namespace FB_DataApp.Helpers
         {
             get
             {
-                return AppSettings.GetValueOrDefault(ClinicIDKey,ClinicIDDefault);
+                return AppSettings.GetValueOrDefault(ClinicIDKey, ClinicIDDefault);
             }
             set
             {
@@ -484,6 +487,17 @@ namespace FB_DataApp.Helpers
             set
             {
                 AppSettings.AddOrUpdateValue(PasswordKey, value);
+            }
+        }
+        public static string CKT
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault(CKTKey, CKTDefault);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(CKTKey, value);
             }
         }
     }
