@@ -20,6 +20,14 @@ namespace FB_DataApp.Activities
             base.OnCreate(savedInstanceState);
 
             // Create your application here
+            SetContentView(Resource.Layout.WelcomePage);
+            Button mainmenu = FindViewById<Button>(Resource.Id.btnmainmenu);
+            mainmenu.Click += GoToMainMenuBtnClicked;
+        }
+        void GoToMainMenuBtnClicked(object sender, EventArgs e)
+        {
+            StartActivity(typeof(MainActivity));
         }
     }
+
 }
