@@ -15,11 +15,14 @@ namespace FB_DataApp.Activities
     [Activity(Label = "Session1")]
     public class Session1 : Activity
     {
+        
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             // Create your application here
+            SetContentView(Resource.Layout.Session1);
+
         }
     }
 }

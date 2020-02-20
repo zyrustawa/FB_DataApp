@@ -1,136 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout 
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
-	xmlns:tools="http://schemas.android.com/tools"
-	android:id="@+id/container"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-	android:background="@color/yellow"
-	tools:menu="navigation"
-	>
-	<include android:id="@+id/toolbar" layout="@layout/toolbar" />
-	<ScrollView
-		android:minWidth="25px"
-		android:minHeight="25px"
-		android:layout_width="match_parent"
-		android:layout_height="fill_parent"
-		android:id="@+id/scrollView1" >
-		<LinearLayout
-			android:orientation="vertical"
-			android:minWidth="25px"
-			android:minHeight="25px"
-			android:layout_width="match_parent"
-			android:layout_height="fill_parent"
-			android:id="@+id/relativeLayout1" > 
-			<LinearLayout
-			android:orientation="horizontal"
-			android:minWidth="25px"
-			android:minHeight="25px"
-			android:layout_width="match_parent"
-			android:layout_height="50dp"
-			android:id="@+id/relativeLayout1" > 
-			<ImageView
-						android:src="@drawable/fbbench"
-						android:layout_width="match_parent"
-						android:layout_height="150dp"
-						android:layout_marginTop="10dp"
-						android:layout_gravity="center"
-					
-						android:contextClickable="false"
-						android:id="@+id/imageView2" />
-			
-			</LinearLayout>
-			<LinearLayout
-				android:id="@+id/newclientlyt"
-				android:layout_width="fill_parent"
-				android:layout_height="50sp"
-				android:orientation="horizontal"
-				android:background="#a9a9a9"
-				android:layout_marginTop="20dp"
-				android:layout_marginLeft="10dp"
-				android:layout_marginRight="10dp"
-			>
-				
-				<TextView
-					android:id="@+id/newclient"
-					android:layout_width="match_parent"
-					android:layout_height="fill_parent"
-					android:text="@string/Enewclient"
-					android:textAlignment="center"
-					android:textSize="28dp"
-					
-					/>
-			</LinearLayout>
-			<LinearLayout
-				android:id="@+id/follow"
-				android:layout_width="fill_parent"
-				android:layout_height="50sp"
-				android:orientation="horizontal"
-				android:background="#a9a9a9"
-				android:layout_marginTop="20dp"
-				android:layout_marginLeft="10dp"
-				android:layout_marginRight="10dp"
-			>
-				
-				<TextView
-					android:id="@+id/followup"
-					android:layout_width="match_parent"
-					android:layout_height="fill_parent"
-					android:textAlignment="center"
-					android:text="@string/Efollowup"
-					android:textSize="28dp"
-					
-					/>
-			</LinearLayout>
-			<LinearLayout
-				android:id="@+id/problem"
-				android:layout_width="fill_parent"
-				android:layout_height="50sp"
-				android:orientation="horizontal"
-				android:background="#a9a9a9"
-				android:layout_marginTop="20dp"
-				android:layout_marginLeft="10dp"
-				android:layout_marginRight="10dp"
-			>
-				
-				<TextView
-					android:id="@+id/newproblem"
-					android:layout_width="match_parent"
-					android:layout_height="fill_parent"
-					android:text="@string/Enewproblem"
-					android:textAlignment="center"
-					android:textSize="28dp"
-					
-					/>
-			</LinearLayout>
-			<LinearLayout
-				android:id="@+id/ckt"
-				android:layout_width="fill_parent"
-				android:layout_height="50sp"
-				android:orientation="horizontal"
-				android:background="#a9a9a9"
-				android:layout_marginTop="20dp"
-				android:layout_marginLeft="10dp"
-				android:layout_marginRight="10dp"
-			>
-				
-				<TextView
-					android:id="@+id/cktreg"
-					android:layout_width="match_parent"
-					android:layout_height="fill_parent"
-					android:text="@string/CKT"
-					android:textAlignment="center"
-					android:textSize="28dp"
-				
-					/>
-			</LinearLayout>
-			   
-		
-		</LinearLayout>
-		
-         
-	</ScrollView>
-		
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:padding="0dp">
+
+    <android.support.v7.widget.ActionBarContainer
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="48.0dp"
+        android:id="@+id/actionBarContainer1" >
+        <android.support.v7.view.menu.ActionMenuItemView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"
+            android:id="@+id/actionMenuItemView1" />
+    </android.support.v7.widget.ActionBarContainer>
+    
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        cardview:cardElevation="10dp"
+        cardview:cardBackgroundColor="#FFF200"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/FBLogoround"
+            />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:orientation="vertical"
+            android:layout_marginTop="220dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            >
+            <Button
+                android:id="@+id/newclient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="New Client"
+                android:shadowColor="@android:color/darker_gray"
+                android:background="@color/white"
+                android:textSize="@dimen/abc_text_size_medium_material"
+            />
+            <Button
+                android:id="@+id/followupclient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Follow Up Client"
+                android:layout_marginTop="16dp"
+                android:shadowColor="@android:color/darker_gray"
+                android:background="@color/white"
+                android:textSize="@dimen/abc_text_size_medium_material"
+            />
+            <Button
+                android:id="@+id/returningclient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Returning Client"
+                android:layout_marginTop="16dp"
+                android:shadowColor="@android:color/darker_gray"
+                android:background="@color/white"
+                android:textSize="@dimen/abc_text_size_medium_material"
+            />
+            <Button
+                android:id="@+id/cktregister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CKT Register"
+                android:layout_marginTop="16dp"
+                android:shadowColor="@android:color/darker_gray"
+                android:background="@color/white"
+                android:textSize="@dimen/abc_text_size_medium_material"
+            />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
 </LinearLayout>
+ 
+
+

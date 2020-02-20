@@ -20,6 +20,12 @@ namespace FB_DataApp.Activities
             base.OnCreate(savedInstanceState);
 
             // Create your application here
+            Button existingaccount = FindViewById<Button>(Resource.Id.btnexistingaccount);
+            existingaccount.Click += ExistingAccountClicked;
+        }
+        void ExistingAccountClicked(object sender, EventArgs e)
+        {
+            StartActivity(typeof(Login));
         }
     }
 }
