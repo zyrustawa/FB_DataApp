@@ -10,6 +10,9 @@ using FB_DataApp.Activities;
 using System;
 using Android.Util;
 using FB_DataApp.Classes;
+using MySql.Data.MySqlClient;
+using System.Data;
+using FB_DataApp.Database;
 
 namespace FB_DataApp
 {
@@ -42,8 +45,8 @@ namespace FB_DataApp
             //click event for CKT Register
             TextView reg = FindViewById<TextView>(Resource.Id.cktreg);
             reg.Click += Reg_Click;
-            
 
+            //CheckOnlineDB();
 
         }
 
@@ -185,6 +188,32 @@ namespace FB_DataApp
 
             }
             return base.OnOptionsItemSelected(item);
+        }
+        void CheckOnlineDB()
+        {
+            MySqlConnection conn = null;
+            try
+            {
+                conn = new MyDB().Myconn();
+                // conn.Open();
+                if (conn.State.Equals(ConnectionState.Closed))
+                {
+                    conn.Open();
+
+                    Toast.MakeText(this, "Connection successfull", ToastLength.Short).Show();
+                }
+                
+                
+            }
+            catch(Exception ex)
+            {
+
+               Log.Error("Error-database","Connection Error "+ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
     }
 }

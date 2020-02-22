@@ -234,14 +234,60 @@ namespace FB_DataApp.Activities
 
         private void Abc_Click(object sender, EventArgs e)
         {
+            Save();
+        }
+        string[] LoadNames()
+        {
+            
+            List<Client> ab = select.MyClient1("0", "Status");
+            string[] an;
+            int i = 0;
+            if(ab.Count>0)
+            {
+                an = new string[ab.Count];
+                foreach (Client c in ab)
+                {
+                    an[i] = c.Name;
+                    i++;
+                }
+            }
+            else
+            {
+                an = new string[1];
+                an[0] = "";
+            }
+            return an;
+        }
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.menu1, menu);
+            // shona=FindViewById<IMenuItem>(menu.FindItem)
+            return base.OnCreateOptionsMenu(menu);
+
+        }
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Resource.Id.nav_home:
+                    {
+                        Save();
+                        return true;
+                    }
+
+            }
+            return base.OnOptionsItemSelected(item);
+        }
+        private void Save()
+        {
             try
             {
-                 id = FindViewById<EditText>(Resource.Id.account3);
-                 cname = FindViewById<AutoCompleteTextView>(Resource.Id.name);
-                 dob = FindViewById<EditText>(Resource.Id.dob);
-                 dos = FindViewById<EditText>(Resource.Id.dos);
-                 gender = FindViewById<EditText>(Resource.Id.gender);
-                 number = FindViewById<EditText>(Resource.Id.number);
+                id = FindViewById<EditText>(Resource.Id.account3);
+                cname = FindViewById<AutoCompleteTextView>(Resource.Id.name);
+                dob = FindViewById<EditText>(Resource.Id.dob);
+                dos = FindViewById<EditText>(Resource.Id.dos);
+                gender = FindViewById<EditText>(Resource.Id.gender);
+                number = FindViewById<EditText>(Resource.Id.number);
                 if (id.Text == "")
                 {
                     Toast.MakeText(this, "Enter client id", ToastLength.Short).Show();
@@ -327,35 +373,35 @@ namespace FB_DataApp.Activities
                     String sid = DateTime.Now.ToShortDateString() + id.Text;
                     String date = dos.Text;
                     string[] client = { id.Text, cname.Text, dob.Text, gender.Text, date, "0" };
-                   
+
                     Insert abc = new Insert();
                     Select sel = new Select();
-                    status = sel.CheckStatus("Session", id.Text, "ClientID")+1;
-                
-                    string[] session = { sid, number.Text, slocation, id.Text, lhwid, status.ToString()};
+                    status = sel.CheckStatus("Session", id.Text, "ClientID") + 1;
+
+                    string[] session = { sid, number.Text, slocation, id.Text, lhwid, status.ToString() };
                     string[] clientsession = { sid, qsn1, qsn2, qsn3, qsn4, qsn5, qsn6, qsn7, qsn8, qsn9, qsn10, qsn11, qsn12, qsn13, qsn14, date, f_up };
                     int a = sel.CheckClient1(client);
                     int b = abc.Session1(session), c = abc.ClientSession(clientsession);
-                    if (a ==100)
+                    if (a == 100)
                     {
                         if (c == 100)
                         {
-                            if(b == 100)
+                            if (b == 100)
                             {
                                 Toast.MakeText(this, "client data saved successfully ", ToastLength.Short).Show();
                             }
-                                
+
                         }
                         else if (b == 200 || c == 200)
                         {
-                            Toast.MakeText(this, "The information already exists for this session a "+a +" b "+b+" c "+c, ToastLength.Short).Show();
+                            Toast.MakeText(this, "The information already exists for this session a " + a + " b " + b + " c " + c, ToastLength.Short).Show();
                             //rollback from here
                         }
                         else if (b == 0 || c == 0)
                         {
                             Toast.MakeText(this, "Database connection error", ToastLength.Short).Show();
                         }
-                        else if (a== 100)
+                        else if (a == 100)
                         {
                             Toast.MakeText(this, "Client does not exist", ToastLength.Short).Show();
                         }
@@ -365,7 +411,7 @@ namespace FB_DataApp.Activities
                             //rollback from here
                         }
                     }
-                   
+
                     else if (a == 201 || a == 0)
                     {
                         Toast.MakeText(this, "Database error ", ToastLength.Short).Show();
@@ -374,10 +420,10 @@ namespace FB_DataApp.Activities
                     {
                         Toast.MakeText(this, "no client details in the database ", ToastLength.Short).Show();
                     }
-                   
+
                     else
                     {
-                        Toast.MakeText(this, "Unknown error "+a, ToastLength.Short).Show();
+                        Toast.MakeText(this, "Unknown error " + a, ToastLength.Short).Show();
                     }
                     //Toast.MakeText(this, "c "+a+" s "+b+" cs "+c, ToastLength.Short).Show();
                 }
@@ -386,28 +432,6 @@ namespace FB_DataApp.Activities
             {
                 Toast.MakeText(this, "Error-session1 " + ex.Message, ToastLength.Short).Show();
             }
-        }
-        string[] LoadNames()
-        {
-            
-            List<Client> ab = select.MyClient1("0", "Status");
-            string[] an;
-            int i = 0;
-            if(ab.Count>0)
-            {
-                an = new string[ab.Count];
-                foreach (Client c in ab)
-                {
-                    an[i] = c.Name;
-                    i++;
-                }
-            }
-            else
-            {
-                an = new string[1];
-                an[0] = "";
-            }
-            return an;
         }
     }
 }

@@ -132,12 +132,59 @@ namespace FB_DataApp.Activities
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            Save();
+        }
+        string[] LoadNames()
+        {
+
+            List<Client> ab = select.MyClient1("0", "Status");
+            string[] an;
+            int i = 0;
+            if (ab.Count > 0)
+            {
+                an = new string[ab.Count];
+                foreach (Client c in ab)
+                {
+                    an[i] = c.Name;
+                    i++;
+                }
+            }
+            else
+            {
+                an = new string[1];
+                an[0] = "";
+            }
+            return an;
+        }
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.menu1, menu);
+            // shona=FindViewById<IMenuItem>(menu.FindItem)
+            return base.OnCreateOptionsMenu(menu);
+
+        }
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Resource.Id.nav_home:
+                    {
+                        Save(); 
+                        return true;
+                    }
+
+            }
+            return base.OnOptionsItemSelected(item);
+        }
+        private void Save()
+        {
+
+            dob = FindViewById<EditText>(Resource.Id.Date1);
+            da = FindViewById<EditText>(Resource.Id.Date2);
             
-             dob = FindViewById<EditText>(Resource.Id.Date1);
-             da = FindViewById<EditText>(Resource.Id.Date2);
             try
             {
-                if(int.Parse(cid.Text)<0 || int.Parse(cid.Text) > 36)
+                if (int.Parse(cid.Text) < 0 || int.Parse(cid.Text) > 36)
                 {
                     Toast.MakeText(this, "Invalid Clinic Id ", ToastLength.Long).Show();
                 }
@@ -145,15 +192,15 @@ namespace FB_DataApp.Activities
                 {
                     Toast.MakeText(this, "Invalid Lay Health Worker Id ", ToastLength.Long).Show();
                 }
-               else if (int.Parse(pid.Text) < 0)
+                else if (int.Parse(pid.Text) < 0)
                 {
                     Toast.MakeText(this, "Invalid Client Id ", ToastLength.Long).Show();
                 }
-                else if (name.Text=="")
+                else if (name.Text == "")
                 {
                     Toast.MakeText(this, "Invalid client name ", ToastLength.Long).Show();
                 }
-                else if (gender.Text=="")
+                else if (gender.Text == "")
                 {
                     Toast.MakeText(this, "Select the gender ", ToastLength.Long).Show();
                 }
@@ -173,7 +220,7 @@ namespace FB_DataApp.Activities
                     int isa = insert.CktRegister(ckt);
                     int check = select.CheckCKT(ckt);
                     int count = select.MyCount("Session", pid.Text, "ClientID");
-                    if(int.Parse(Helpers.Settings.CKT)>count || int.Parse(Helpers.Settings.CKT) > count)
+                    if (int.Parse(Helpers.Settings.CKT) > count || int.Parse(Helpers.Settings.CKT).Equals(count))
                     {
                         if (isa.Equals(100))
                         {
@@ -201,35 +248,13 @@ namespace FB_DataApp.Activities
                     {
                         Toast.MakeText(this, "Session count less than minimum", ToastLength.Long).Show();
                     }
-                    
-                }
-            }
-            catch(Exception ex)
-            {
-                Toast.MakeText(this, "Error " + ex.Message, ToastLength.Long).Show();
-            }
-        }
-        string[] LoadNames()
-        {
 
-            List<Client> ab = select.MyClient1("0", "Status");
-            string[] an;
-            int i = 0;
-            if (ab.Count > 0)
-            {
-                an = new string[ab.Count];
-                foreach (Client c in ab)
-                {
-                    an[i] = c.Name;
-                    i++;
                 }
             }
-            else
+            catch (Exception ex)
             {
-                an = new string[1];
-                an[0] = "";
+                Toast.MakeText(this, "Error 1 " + ex.Message, ToastLength.Long).Show();
             }
-            return an;
         }
     }
 }

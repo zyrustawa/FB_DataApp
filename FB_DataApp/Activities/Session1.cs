@@ -18,12 +18,16 @@ namespace FB_DataApp.Activities
     [Activity(Label = "Session1")]
     public class Session1 : AppCompatActivity
     {
-        private String gender, slocation, qsn1, qsn2, qsn3, qsn4, qsn5, qsn6, qsn7, qsn8, qsn9, qsn10, qsn11, qsn12, qsn13, qsn14;
+        private String gender, slocation, qsn1="", qsn2 = "", qsn3 = "", qsn4 = "", qsn5 = "", qsn6 = "", qsn7 = "", qsn8 = "", qsn9 = "", qsn10 = "", qsn11 = "", qsn12 = "", qsn13 = "", qsn14 = "";
         String lhwid = "";
+
+        ScrollView myiew,main;
+        LinearLayout linear;
         EditText id, cname, dob, dos, number,cid,lid;
+        TextView ssq14;
         RadioGroup radioGroup;
         Button abc;
-        int count =0,actual=0;
+        int count =100,actual=10,sum=10,q1=10,q2 = 10, q3 = 10, q4 = 10, q5 = 10, q6 = 10, q7 = 10, q8 = 10, q9 = 10, q10 = 10, q11 = 10, q12 = 10, q13 = 10, q14 = 10;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -33,6 +37,7 @@ namespace FB_DataApp.Activities
 
             var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
+           
             SupportActionBar.Title = "Data-Collect: New Client";
 
              cid = FindViewById<EditText>(Resource.Id.account1 );
@@ -47,101 +52,275 @@ namespace FB_DataApp.Activities
             radioGroup.CheckedChange += delegate {
                 var option = FindViewById<RadioButton>(radioGroup.CheckedRadioButtonId).Text;
                 gender = option;
-            }; 
+
+            };
+            ssq14 = FindViewById<TextView>(Resource.Id.Sum123);
             //location
             RadioGroup loc = FindViewById<RadioGroup>(Resource.Id.radioGroup2);
             loc.CheckedChange += delegate {
                 var option = FindViewById<RadioButton>(loc.CheckedRadioButtonId).Text;
                 slocation = option;
+               // Toast.MakeText(this, "loc " + option, ToastLength.Long).Show();
             };
+            
             //ssq1
             RadioGroup answer1 = FindViewById<RadioGroup>(Resource.Id.rbtnqsn1);
             answer1.CheckedChange += delegate {
                 var option = FindViewById<RadioButton>(answer1.CheckedRadioButtonId).Text;
+                if(option.Equals("yes"))
+                {
+                    q1 = 1;
+                }
+                else 
+                {
+                    q1 = 0;
+                }
+               
                 qsn1 = option;
+                Session1 abc = new Session1();
+                abc.Calculate1();
+                ssq14.Text = "SSQ 14 score: "+ count;
             };
             //ssq2
 
             RadioGroup answer2 = FindViewById<RadioGroup>(Resource.Id.rbtnqsn2);
             answer2.CheckedChange += delegate {
                 var option = FindViewById<RadioButton>(answer2.CheckedRadioButtonId).Text;
+                if (option.Equals("yes"))
+                {
+                    q2 = 1;
+                }
+                else
+                {
+                    q2 = 0;
+                }
+                
                 qsn2 = option;
+
+                Session1 abc = new Session1();
+                abc.Calculate1();
+                ssq14.Text = "SSQ 14 score: " + count;
             };
             //ssq3
             RadioGroup answer3 = FindViewById<RadioGroup>(Resource.Id.rbtnqsn3);
             answer3.CheckedChange += delegate {
                 var option = FindViewById<RadioButton>(answer3.CheckedRadioButtonId).Text;
+                if (option.Equals("yes"))
+                {
+                    q3 = 1;
+                }
+                else
+                {
+                    q3 = 0;
+                }
                 qsn3 = option;
+
+                Session1 abc = new Session1();
+                abc.Calculate1();
+                ssq14.Text = "SSQ 14 score: " + count;
             };
             //ssq4
             RadioGroup answer4 = FindViewById<RadioGroup>(Resource.Id.rbtnqsn4);
             answer4.CheckedChange += delegate {
                 var option = FindViewById<RadioButton>(answer4.CheckedRadioButtonId).Text;
+                if (option.Equals("yes") && q4 == 10)
+                {
+                    q4 = 1;
+                }
+                else
+                {
+                    q1 = 0;
+                }
                 qsn4 = option;
+
+                Session1 abc = new Session1();
+                abc.Calculate1();
+                ssq14.Text = "SSQ 14 score: " + count;
             };
             //ssq5
             RadioGroup answer5 = FindViewById<RadioGroup>(Resource.Id.rbtnqsn5);
             answer5.CheckedChange += delegate {
                 var option = FindViewById<RadioButton>(answer5.CheckedRadioButtonId).Text;
+                if (option.Equals("yes"))
+                {
+                    q5 = 1;
+                }
+                else
+                {
+                    q5 = 0;
+                }
                 qsn5 = option;
+
+                Session1 abc = new Session1();
+                abc.Calculate1();
+                ssq14.Text = "SSQ 14 score: " + count;
             };
             //ssq6
             RadioGroup answer6 = FindViewById<RadioGroup>(Resource.Id.rbtnqsn6);
             answer6.CheckedChange += delegate {
                 var option = FindViewById<RadioButton>(answer6.CheckedRadioButtonId).Text;
+                if (option.Equals("yes") )
+                {
+                    q6 = 1;
+                }
+                else
+                {
+                    q6 = 0;
+                }
                 qsn6 = option;
+
+                Session1 abc = new Session1();
+                abc.Calculate1();
+                ssq14.Text = "SSQ 14 score: " + count;
             };
             //ssq7
             RadioGroup answer7 = FindViewById<RadioGroup>(Resource.Id.rbtnqsn7);
             answer7.CheckedChange += delegate {
                 var option = FindViewById<RadioButton>(answer7.CheckedRadioButtonId).Text;
+                if (option.Equals("yes"))
+                {
+                    q7 = 1;
+                }
+                else
+                {
+                    q7 = 0;
+                }
                 qsn7 = option;
+
+                Session1 abc = new Session1();
+                abc.Calculate1();
+                ssq14.Text = "SSQ 14 score: " + count;
             };
             //ssq8
             RadioGroup answer8 = FindViewById<RadioGroup>(Resource.Id.rbtnqsn8);
             answer8.CheckedChange += delegate {
                 var option = FindViewById<RadioButton>(answer8.CheckedRadioButtonId).Text;
+                if (option.Equals("yes"))
+                {
+                    q8 = 1;
+                }
+                else
+                {
+                    q8 = 0;
+                }
                 qsn8 = option;
+
+                Session1 abc = new Session1();
+                abc.Calculate1();
+                ssq14.Text = "SSQ 14 score: " + count;
             };
             //ssq9
             RadioGroup answer9 = FindViewById<RadioGroup>(Resource.Id.rbtnqsn9);
             answer9.CheckedChange += delegate {
                 var option = FindViewById<RadioButton>(answer9.CheckedRadioButtonId).Text;
+                if (option.Equals("yes"))
+                {
+                    q9 = 1;
+                }
+                else
+                {
+                    q9 = 0;
+                }
                 qsn9 = option;
+
+                Session1 abc = new Session1();
+                abc.Calculate1();
+                ssq14.Text = "SSQ 14 score: " + count;
             };
             //ssq10
-            RadioGroup answer10 = FindViewById<RadioGroup>(Resource.Id.rbtnqsn1);
+            RadioGroup answer10 = FindViewById<RadioGroup>(Resource.Id.rbtnqsn10);
             answer10.CheckedChange += delegate {
                 var option = FindViewById<RadioButton>(answer10.CheckedRadioButtonId).Text;
+                if (option.Equals("yes"))
+                {
+                    q10 = 1;
+                }
+                else
+                {
+                    q10 = 0;
+                }
                 qsn10 = option;
+
+                Session1 abc = new Session1();
+                abc.Calculate1();
+                ssq14.Text = "SSQ 14 score: " + count;
             };
             //ssq11
-            RadioGroup answer11 = FindViewById<RadioGroup>(Resource.Id.rbtnqsn1);
+            RadioGroup answer11 = FindViewById<RadioGroup>(Resource.Id.rbtnqsn10);
             answer11.CheckedChange += delegate {
                 var option = FindViewById<RadioButton>(answer11.CheckedRadioButtonId).Text;
+                if (option.Equals("yes"))
+                {
+                    q11 = 1;
+                }
+                else
+                {
+                    q11 = 0;
+                }
                 qsn11 = option;
+
+                Session1 abc = new Session1();
+                abc.Calculate1();
+                ssq14.Text = "SSQ 14 score: " + count;
             };
             //ssq12
             RadioGroup answer12 = FindViewById<RadioGroup>(Resource.Id.rbtnqsn12);
             answer12.CheckedChange += delegate {
                 var option = FindViewById<RadioButton>(answer12.CheckedRadioButtonId).Text;
+                if (option.Equals("yes"))
+                {
+                    q12 = 1;
+                }
+                else
+                {
+                    q12 = 0;
+                }
                 qsn12 = option;
+
+                Session1 abc = new Session1();
+                abc.Calculate1();
+                ssq14.Text = "SSQ 14 score: " + count;
             };
             //ssq13
             RadioGroup answer13 = FindViewById<RadioGroup>(Resource.Id.rbtnqsn13);
             answer13.CheckedChange += delegate {
                 var option = FindViewById<RadioButton>(answer13.CheckedRadioButtonId).Text;
+                if (option.Equals("yes"))
+                {
+                    q13 = 1;
+                }
+                else
+                {
+                    q13 = 0;
+                }
                 qsn13 = option;
+
+                Session1 abc = new Session1();
+                abc.Calculate1();
+                ssq14.Text = "SSQ 14 score: " + count;
             };
             //ssq14
             RadioGroup answer14 = FindViewById<RadioGroup>(Resource.Id.rbtnqsn14);
             answer14.CheckedChange += delegate {
                 var option = FindViewById<RadioButton>(answer14.CheckedRadioButtonId).Text;
+                if (option.Equals("yes") )
+                {
+                    q14 = 1;
+                }
+                else
+                {
+                    q14 = 0;
+                }
                 qsn14 = option;
+
+                Session1 abc = new Session1();
+                abc.Calculate1();
+                ssq14.Text = "SSQ 14 score: " + count;
             };
-            // Client id check
            
-             id = FindViewById<EditText>(Resource.Id.account3);
+            // Client id check
+
+            id = FindViewById<EditText>(Resource.Id.account3);
              cname = FindViewById<EditText>(Resource.Id.name);
              dob = FindViewById<EditText>(Resource.Id.dob);
              dos = FindViewById<EditText>(Resource.Id.dos);
@@ -150,6 +329,12 @@ namespace FB_DataApp.Activities
              count = new Select().MyCount("Client", "0", "Status");
             actual = count == 0 ? 1 : count + 1;
             id.Text = actual.ToString();
+
+            myiew = FindViewById<ScrollView>(Resource.Id.scrollViewTBView);
+            main = FindViewById<ScrollView>(Resource.Id.scrollViewMain);
+            linear = FindViewById<LinearLayout>(Resource.Id.Layout_ssq14);
+
+           // sum = q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9 + q10 + q11 + q12 + q13 + q14;
 
         }   
 
@@ -175,33 +360,69 @@ namespace FB_DataApp.Activities
                 abc.Enabled = true;
             }
         }
-
+        private void Calculate1()
+        {
+           // ssq14 = FindViewById<TextView>(Resource.Id.Sum123);
+             
+            if (q1 != 10 && q2 != 10 && q3 != 10 && q4 != 10 && q5 != 10 && q6 != 7 && q8 != 10 && q9 != 10 && q11 != 10 && q12 != 10 && q13 != 10 && q14 != 10)
+            {
+                count = 0;
+                count = q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9 + q10 + q11 + q12 + q13 + q14;
+              
+            }
+           
+        }
         private void Abc_Click(object sender, EventArgs e)
+        {
+            Savenow();
+           
+        }
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.menu1, menu);
+            // shona=FindViewById<IMenuItem>(menu.FindItem)
+            return base.OnCreateOptionsMenu(menu);
+
+        }
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Resource.Id.nav_home:
+                    {
+                        Savenow();
+                        return true;
+                    }
+            
+            }
+            return base.OnOptionsItemSelected(item);
+        }
+        private void Save()
         {
             try
             {
-               
-                if(id.Text=="")
+
+                if (id.Text == "")
                 {
                     Toast.MakeText(this, "Enter client id", ToastLength.Short).Show();
                 }
-                else if (cname.Text=="")
+                else if (cname.Text == "")
                 {
                     Toast.MakeText(this, "Enter client name", ToastLength.Short).Show();
                 }
-                else if(gender=="")
+                else if (gender == "")
                 {
                     Toast.MakeText(this, "select client gender", ToastLength.Short).Show();
                 }
-                else if(dob.Text=="")
+                else if (dob.Text == "")
                 {
                     Toast.MakeText(this, "Enter date of birth of client", ToastLength.Short).Show();
                 }
-                else if(dos.Text=="")
+                else if (dos.Text == "")
                 {
                     Toast.MakeText(this, "Enter date when the session was done", ToastLength.Short).Show();
                 }
-                else if(number.Text=="" || number.Text !="1")
+                else if (number.Text == "" || number.Text != "1")
                 {
                     Toast.MakeText(this, "Enter session number, it must be session number 1", ToastLength.Short).Show();
                 }
@@ -263,27 +484,27 @@ namespace FB_DataApp.Activities
                 }
                 else
                 {
-                   
+
                     String date = dos.Text;
                     String sid = DateTime.Now.ToShortDateString() + cid.Text + "-" + lid.Text + "-" + id.Text;
-                    string [] client={id.Text,cname.Text,dob.Text,gender, date, "0" };
-                    string[] session = {sid,number.Text,slocation,id.Text,lhwid,"0"};
-                    string[] clientsession = {sid,qsn1,qsn2,qsn3,qsn4,qsn5,qsn6,qsn7,qsn8,qsn9,qsn10,qsn11,qsn12,qsn13,qsn14, date,"0" };
+                    string[] client = { id.Text, cname.Text, dob.Text, gender, date, "0" };
+                    string[] session = { sid, number.Text, slocation, id.Text, lhwid, "0" };
+                    string[] clientsession = { sid, qsn1, qsn2, qsn3, qsn4, qsn5, qsn6, qsn7, qsn8, qsn9, qsn10, qsn11, qsn12, qsn13, qsn14, date, "0" };
                     Insert abc = new Insert();
                     int a = abc.Client(client);
                     int b = abc.Session(session), c = abc.ClientSession(clientsession);
-                    if(a==100)
+                    if (a == 100)
                     {
-                        if(b==100 && c==100)
+                        if (b == 100 && c == 100)
                         {
                             Toast.MakeText(this, "client data saved successfully ", ToastLength.Short).Show();
                         }
-                        else if ( b == 200 || c == 200)
+                        else if (b == 200 || c == 200)
                         {
                             Toast.MakeText(this, "The information already exists for this session ", ToastLength.Short).Show();
                             //rollback from here
                         }
-                        else if (b == 0 || c==0)
+                        else if (b == 0 || c == 0)
                         {
                             Toast.MakeText(this, "Database connection error", ToastLength.Short).Show();
                         }
@@ -293,27 +514,27 @@ namespace FB_DataApp.Activities
                             //rollback from here
                         }
                     }
-                    else if(a==200)
+                    else if (a == 200)
                     {
                         Toast.MakeText(this, "Error while saving client data ", ToastLength.Short).Show();
                     }
-                    else if(a==201 || a==0)
+                    else if (a == 201 || a == 0)
                     {
                         Toast.MakeText(this, "Database error ", ToastLength.Short).Show();
                     }
-                    else if(a==1)
+                    else if (a == 1)
                     {
                         Toast.MakeText(this, "client id already in use ", ToastLength.Short).Show();
                     }
-                    else if(a==2)
+                    else if (a == 2)
                     {
                         Toast.MakeText(this, "Client details already exists in the database", ToastLength.Short).Show();
                     }
-                    else if(a==0)
+                    else if (a == 0)
                     {
                         Toast.MakeText(this, "Database connection error", ToastLength.Short).Show();
                     }
-                    else if(a==3)
+                    else if (a == 3)
                     {
                         Toast.MakeText(this, "Session for this client has been saved", ToastLength.Short).Show();
                     }
@@ -324,12 +545,53 @@ namespace FB_DataApp.Activities
                     //Toast.MakeText(this, "c "+a+" s "+b+" cs "+c, ToastLength.Short).Show();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Toast.MakeText(this, "Error-session1 " + ex.Message, ToastLength.Short).Show();
             }
+        }
+        void Savenow()
+        {
+            if(myiew.Visibility==Android.Views.ViewStates.Visible)
+            {
+                Save();
+            }
+            else
+            {
+                if (id.Text == "")
+                {
+                    Toast.MakeText(this, "Enter client id", ToastLength.Short).Show();
+                }
+                else if (cname.Text == "")
+                {
+                    Toast.MakeText(this, "Enter client name", ToastLength.Short).Show();
+                }
+                else if (gender == "")
+                {
+                    Toast.MakeText(this, "select client gender", ToastLength.Short).Show();
+                }
+                else if (dob.Text == "")
+                {
+                    Toast.MakeText(this, "Enter date of birth of client", ToastLength.Short).Show();
+                }
+                else if (dos.Text == "")
+                {
+                    Toast.MakeText(this, "Enter date when the session was done", ToastLength.Short).Show();
+                }
+                else if (number.Text == "" || number.Text != "1")
+                {
+                    Toast.MakeText(this, "Enter session number, it must be session number 1", ToastLength.Short).Show();
+                }
+                else
+                {
+                    myiew.Visibility = Android.Views.ViewStates.Visible;
+                    linear.Visibility = Android.Views.ViewStates.Visible;
+                  //  main.Visibility = Android.Views.ViewStates.Gone;
+
+                }
+            }
            
         }
-        
+       
     }
 }
