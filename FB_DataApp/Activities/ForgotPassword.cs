@@ -12,17 +12,15 @@ using Android.Widget;
 
 namespace FB_DataApp.Activities
 {
-    [Activity(Label = "Session1")]
-    public class Session1 : Activity
+    [Activity(Label = "ForgotPassword")]
+    public class ForgotPassword : Activity
     {
-        
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             // Create your application here
-            SetContentView(Resource.Layout.Session1);
-
+            SetContentView(Resource.Layout.activity_forgotpassword);
         }
     }
 }

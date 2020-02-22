@@ -1,5 +1,11 @@
 <resources>
-    <string name="app_name">Friendship Bench</string>
+    <string name="gender_prompt">Select Gender</string>
+    <string-array name="gender_array">
+      <item>Female</item>
+      <item>Male</item>
+    </string-array>
+
+  <string name="app_name">Friendship Bench</string>
     <string name="action_settings">Settings</string>
     <string name="CKT">CKT Register</string>
   <!--English values-->
@@ -21,7 +27,7 @@
 
   <!--ESQ14-->
   <string name="EpstMonth">In the past Week: </string>
-  <string name="eqsn1">There were times in which i was thinking deeply or thinking about many thinks </string>
+  <string name="eqsn1">There were times in which i was thinking deeply or thinking about many things </string>
   <string name="eqsn2">I found myself sometimes failing to concentrate</string>
   <string name="eqsn3">I lost my temper or got annoyed over trivial matters</string>
   <string name="eqsn4">I had nightmares or bad dreams</string>
