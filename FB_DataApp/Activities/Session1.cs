@@ -78,8 +78,8 @@ namespace FB_DataApp.Activities
                
                 qsn1 = option;
                 Session1 abc = new Session1();
-                abc.Calculate1();
-                ssq14.Text = "SSQ 14 score: "+ count;
+                
+                ssq14.Text = "SSQ 14 score: "+ abc.Calculate1(); 
             };
             //ssq2
 
@@ -246,7 +246,7 @@ namespace FB_DataApp.Activities
                 ssq14.Text = "SSQ 14 score: " + count;
             };
             //ssq11
-            RadioGroup answer11 = FindViewById<RadioGroup>(Resource.Id.rbtnqsn10);
+            RadioGroup answer11 = FindViewById<RadioGroup>(Resource.Id.rbtnqsn11);
             answer11.CheckedChange += delegate {
                 var option = FindViewById<RadioButton>(answer11.CheckedRadioButtonId).Text;
                 if (option.Equals("yes"))
@@ -360,7 +360,7 @@ namespace FB_DataApp.Activities
                 abc.Enabled = true;
             }
         }
-        private void Calculate1()
+        private int Calculate1()
         {
            // ssq14 = FindViewById<TextView>(Resource.Id.Sum123);
              
@@ -370,7 +370,11 @@ namespace FB_DataApp.Activities
                 count = q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9 + q10 + q11 + q12 + q13 + q14;
               
             }
-           
+            else
+            {
+                count = 0;
+            }
+            return count;
         }
         private void Abc_Click(object sender, EventArgs e)
         {
