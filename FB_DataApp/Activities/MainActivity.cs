@@ -11,7 +11,7 @@ using System.Text;
 
 namespace FB_DataApp.Activities
 {
-   [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = false)]
+   [Activity(Label = "@string/app_name", MainLauncher = false)]
     public class MainActivity : AppCompatActivity
     {
         private Button btnNewClient;

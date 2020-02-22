@@ -8,11 +8,11 @@
     android:minHeight="25px"
     android:background="@color/white"
     >
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp">
-       
-    </LinearLayout>
+    <android.support.v7.widget.Toolbar
+       android:layout_width="match_parent"
+       android:layout_height="?android:attr/actionBarSize"
+       android:background="@android:color/darker_gray"
+    />
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

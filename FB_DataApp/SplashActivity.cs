@@ -17,6 +17,7 @@ namespace FB_DataApp
         protected override void OnResume()
         {
             base.OnResume();
+           
             
             StartActivity(typeof(Login));
         }
