@@ -36,6 +36,7 @@ namespace FB_DataApp.Activities
 
             btnSignin.Click += SignInBtnClicked;
             btnRegister.Click += GoToRegisterBtnClicked;
+            btnForgotPass.Click += ForgotPassBtnClicked;
         }
         private void SignInBtnClicked(object sender, EventArgs e)
         {
@@ -46,6 +47,10 @@ namespace FB_DataApp.Activities
         void GoToRegisterBtnClicked(object sender, EventArgs e)
         {
             StartActivity(typeof(Account));
+        }
+        void ForgotPassBtnClicked(object sender, EventArgs e)
+        {
+            StartActivity(typeof(ForgotPassword));
         }
        
     }

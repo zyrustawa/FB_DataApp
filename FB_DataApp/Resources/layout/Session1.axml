@@ -11,12 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp">
-        <android.support.design.internal.NavigationMenuItemView
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:id="@+id/navigationMenuItemView1" />
+       
     </LinearLayout>
     <ScrollView
         android:layout_width="match_parent"
@@ -601,6 +596,8 @@
                     <TextView
                         android:layout_column="1"
                         android:text="@string/eqsn14"
+
+                        android:textSize="@dimen/abc_text_size_medium_material"
                         android:padding="3dip"/>
                     <RadioGroup
                         android:layout_width="wrap_content"
@@ -626,7 +623,8 @@
                     android:background="#FF909090"/>
 
                 <TableRow>
-                    
+
+                                      
                     <Button
                         android:layout_column="1"
                         android:background="#fff2"
@@ -654,6 +652,7 @@
                         android:textSize="@dimen/abc_text_size_medium_material"
                         android:background="#fff2"
                     />
+                        
 
                 </TableRow>
             </TableLayout>
