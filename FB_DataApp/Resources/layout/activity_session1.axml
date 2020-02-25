@@ -12,7 +12,32 @@
        android:layout_width="match_parent"
        android:layout_height="?android:attr/actionBarSize"
        android:background="@android:color/darker_gray"
-    />
+    > 
+      
+          
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+            android:addStatesFromChildren="true"
+            android:clipChildren="true"
+            android:saveEnabled="true"
+            
+            
+            >
+            <Toolbar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:title="New Session"
+            android:textAlignment="center"
+            android:gravity="center_horizontal | center"
+            android:layout_gravity="center"
+            android:titleTextAppearance="?android:attr/textAppearanceLarge">
+           </Toolbar>
+          
+           
+            </android.support.design.widget.CollapsingToolbarLayout>
+               
+        </android.support.v7.widget.Toolbar>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -35,12 +60,28 @@
                 android:textStyle="bold"
         />
             <EditText
+                android:id="@+id/name"
                 android:inputType="text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/abc_text_size_medium_material"
                 android:textColor="@android:color/black"
+                
         />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/abc_text_size_medium_material"
+                android:text="Client Surname"
+                android:textStyle="bold"
+        />
+            <EditText
+                android:id="@+id/surname"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/abc_text_size_medium_material"
+                android:textColor="@android:color/black"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -53,18 +94,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:id="@+id/gender"
         >
                 <RadioButton
+                    android:id="@+id/female"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Male"
+                    android:text="Female"
                     android:textSize="@dimen/abc_text_size_medium_material"
                
                 />
                 <RadioButton
+                    android:id="@+id/male"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Female"
+                    android:text="Male"
                     android:textSize="@dimen/abc_text_size_medium_material"
             />
             </RadioGroup>
@@ -77,6 +121,7 @@
                 android:textStyle="bold"
             />
             <EditText
+                android:id="@+id/age"
                 android:inputType="number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -89,16 +134,19 @@
                 android:textSize="@dimen/abc_text_size_medium_material"
         />
             <RadioGroup
+                android:id="@+id/location"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 >
                 <RadioButton
+                    android:id="@+id/clinic"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Clinic"
                     android:textSize="@dimen/abc_text_size_medium_material"
             />
                 <RadioButton
+                    android:id="@+id/community"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Community"
@@ -125,10 +173,8 @@
 
                 <TableRow>
                     <TextView
-                        android:minWidth="30px"
-                        android:minHeight="30px"
-                        xmlns="http://schemas.android.com/apk/res/android"
                         android:id="@+id/textView1" />
+                    
                     <TextView
                         android:layout_column="1"
                         android:text="@string/EpstMonth"
@@ -162,6 +208,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
+                        android:id="@+id/qsn1"
                   >
                         <RadioButton
                             android:gravity="center"
@@ -181,18 +228,18 @@
                 <View
                     android:layout_height="2dip"
                     android:background="#FF909090"/>
+          
                 <TableRow>
                     <TextView
                         android:textSize="@dimen/abc_text_size_medium_material"
                         android:text="2"
                         android:padding="3dip"/>
                     <TextView
-                        android:layout_column="1"
-                        android:text="@string/eqsn2 "
                         android:textSize="@dimen/abc_text_size_medium_material"
-                        android:gravity="left"
+                        android:text="@string/eqsn2"
                         android:padding="3dip"/>
                     <RadioGroup
+                        android:id="@+id/qsn2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
@@ -202,7 +249,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Yes"
-                                />
+                                    />
                         <RadioButton
                             android:layout_marginLeft="10dp"
                             android:layout_width="wrap_content"
@@ -226,6 +273,7 @@
                         android:text="@string/eqsn3"
                         android:padding="3dip"/>
                     <RadioGroup
+                        android:id="@+id/qsn3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
@@ -248,18 +296,24 @@
                     android:layout_height="2dip"
                     android:background="#FF909090"/>
 
-                <TableRow>
+                <TableRow 
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
                     <TextView
                         android:layout_column="0"
                         android:text="4"
                         android:textSize="@dimen/abc_text_size_medium_material"
                         android:padding="3dip"/>
                     <TextView
+                        
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_column="1"
                         android:text="@string/eqsn4"
                         android:textSize="@dimen/abc_text_size_medium_material"
                         android:padding="3dip"/>
                     <RadioGroup
+                        android:id="@+id/qsn4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
@@ -294,6 +348,7 @@
                         android:textSize="@dimen/abc_text_size_medium_material"
                         android:padding="3dip"/>
                     <RadioGroup
+                        android:id="@+id/qsn5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
@@ -328,6 +383,7 @@
                         android:textSize="@dimen/abc_text_size_medium_material"
                         android:padding="3dip"/>
                     <RadioGroup
+                        android:id="@+id/qsn6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
@@ -357,11 +413,15 @@
                         android:textSize="@dimen/abc_text_size_medium_material"
                         android:padding="3dip"/>
                     <TextView
+                        
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_column="1"
                         android:text="@string/eqsn7"
                         android:textSize="@dimen/abc_text_size_medium_material"
                         android:padding="3dip"/>
                     <RadioGroup
+                        android:id="@+id/qsn7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
@@ -386,6 +446,7 @@
 
                 <TableRow>
                     <TextView
+                        android:layout_height="wrap_content"
                         android:layout_column="0"
                         android:text="8"
                         android:textSize="@dimen/abc_text_size_medium_material"
@@ -396,6 +457,7 @@
                         android:textSize="@dimen/abc_text_size_medium_material"
                         android:padding="3dip"/>
                     <RadioGroup
+                        android:id="@+id/qsn8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
@@ -415,6 +477,8 @@
                     </RadioGroup>
                 </TableRow>
                 <View
+                    
+                    android:layout_width="match_parent"
                     android:layout_height="2dip"
                     android:background="#FF909090"/>
 
@@ -430,8 +494,8 @@
                         android:textSize="@dimen/abc_text_size_medium_material"
                         android:padding="3dip"/>
                     <RadioGroup
+                        android:id="@+id/qsn9"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
                         android:orientation="horizontal"
                   >
                         <RadioButton
@@ -454,16 +518,21 @@
 
                 <TableRow>
                     <TextView
+                        android:layout_height="wrap_content"
                         android:layout_column="0"
                         android:text="10"
                         android:textSize="@dimen/abc_text_size_medium_material"
                         android:padding="3dip"/>
                     <TextView
+                        
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_column="1"
                         android:text="@string/eqsn10"
                         android:textSize="@dimen/abc_text_size_medium_material"
                         android:padding="3dip"/>
                     <RadioGroup
+                        android:id="@+id/qsn10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
@@ -498,6 +567,7 @@
                         android:text="@string/eqsn11"
                         android:padding="3dip"/>
                     <RadioGroup
+                        android:id="@+id/qsn11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
@@ -522,16 +592,21 @@
 
                 <TableRow>
                     <TextView
+                        
                         android:layout_column="0"
                         android:text="12"
                         android:textSize="@dimen/abc_text_size_medium_material"
                         android:padding="3dip"/>
                     <TextView
+                        
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_column="1"
                         android:text="@string/eqsn12"
                         android:textSize="@dimen/abc_text_size_medium_material"
                         android:padding="3dip"/>
                     <RadioGroup
+                        android:id="@+id/qsn12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
@@ -551,20 +626,26 @@
                     </RadioGroup>
                 </TableRow>
                 <View
+                    
                     android:layout_height="2dip"
                     android:background="#FF909090"/>
 
                 <TableRow>
                     <TextView
+                        
                         android:layout_column="0"
                         android:text="13"
                         android:textSize="@dimen/abc_text_size_medium_material"
                         android:padding="3dip"/>
                     <TextView
+                        
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/eqsn13"
                         android:textSize="@dimen/abc_text_size_medium_material"
                         android:padding="3dip"/>
                     <RadioGroup
+                        android:id="@+id/qsn13"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
@@ -589,17 +670,19 @@
 
                 <TableRow>
                     <TextView
+                        
                         android:layout_column="0"
                         android:text="14"
                         android:textSize="@dimen/abc_text_size_medium_material"
                         android:padding="3dip"/>
                     <TextView
+                        
                         android:layout_column="1"
                         android:text="@string/eqsn14"
-
                         android:textSize="@dimen/abc_text_size_medium_material"
                         android:padding="3dip"/>
                     <RadioGroup
+                        android:id="@+id/qsn14"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
@@ -622,15 +705,18 @@
                     android:layout_height="2dip"
                     android:background="#FF909090"/>
 
-                <TableRow>
-
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
                                       
+                                 
                     <Button
                         android:layout_column="1"
                         android:background="#fff2"
                         android:layout_width="30dp"
                         android:layout_height="wrap_content"
-                        android:text="Refused"
+                        android:text="Give PID"
                         android:textStyle="bold"
                         android:layout_marginLeft="15dp"
                         android:layout_marginRight="35dp"
@@ -638,13 +724,15 @@
                         android:layout_marginTop="8dp"
                         android:textColor="@android:color/black"
                         android:textSize="@dimen/abc_text_size_medium_material"
+                        android:id="@+id/btngivepid"
                     />
 
                     <Button
+                        android:id="@+id/givepid"
                         android:layout_column="2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Give PID"
+                        android:text="Refused"
                         android:textStyle="bold"
                         android:layout_marginBottom="8dp"
                         android:layout_marginTop="8dp"
@@ -652,6 +740,7 @@
                         android:textSize="@dimen/abc_text_size_medium_material"
                         android:background="#fff2"
                     />
+
                         
 
                 </TableRow>

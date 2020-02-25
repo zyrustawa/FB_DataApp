@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "699512696583",
+    "firebase_url": "https://fbscaleupdata.firebaseio.com",
+    "project_id": "fbscaleupdata",
+    "storage_bucket": "fbscaleupdata.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:699512696583:android:d6dad2895ac2910be35fa2",
+        "android_client_info": {
+          "package_name": "com.friendshipbench.fbdataapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "699512696583-ie579fb80m3cidifj1n666rfcems5i6s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvwXA7kfWfDUhXe7tsYhN8envitIpY99I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "699512696583-ie579fb80m3cidifj1n666rfcems5i6s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

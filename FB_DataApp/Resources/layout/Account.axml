@@ -1,37 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
      xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
 	android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:minWidth="300dp"
     >
-    <android.support.v7.widget.Toolbar
-       android:layout_width="match_parent"
-       android:layout_height="?android:attr/actionBarSize"
-       android:background="@android:color/darker_gray"
-    > 
-        <LinearLayout
-               android:orientation="horizontal"
-               android:minWidth="25px"
-               android:minHeight="25px"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:id="@+id/relativeLayout1">
-                
-               
-                    <TextView
-                         android:layout_width="match_parent"
-                         android:layout_height="wrap_content"
-                         android:text="Registration"
-                         android:textStyle="bold"
-                         android:textSize="@dimen/abc_text_size_large_material"
-                         android:textAlignment="center"
-                         android:textColor="@android:color/black"
-            />
-            
-        </LinearLayout>
-        </android.support.v7.widget.Toolbar>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register LHW"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+    />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e2e2e2"
+    />
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -43,113 +34,121 @@
         android:layout_marginRight="8dp"
         cardview:cardBackgroundColor="@android:color/transparent"
         cardview:cardCornerRadius="0dp">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:paddingLeft="25dp"
-            android:paddingRight="25dp"
-            >
-            
-            <ScrollView
+        <ScrollView
                 android:minWidth="25px"
                 android:minHeight="25px"
                 android:layout_width="match_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="match_parent"
                 android:id="@+id/scrollView1">
+                       
                 <LinearLayout
                     android:orientation="vertical"
                     android:minWidth="25px"
                     android:minHeight="25px"
+                    android:padding="16dp"
                     android:layout_width="match_parent"
-                    android:layout_height="fill_parent"
-                    android:id="@+id/relativeLayout1">
+                    android:layout_height="match_parent"
+                    android:id="@+id/linearLayout1">
+                   
                     
-                    <LinearLayout
-                        android:id="@+id/Layout_Name"
+			          <android.support.design.widget.TextInputLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-			                               
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nameText"
+                        >                
                         <EditText
-                            android:id="@+id/name"
                             android:inputType="text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Name"
+                            android:imeOptions="actionNext"
 					/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:id="@+id/Layout_surname"
+                        </android.support.design.widget.TextInputLayout>
+                    
+                 
+                      <android.support.design.widget.TextInputLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">			                                           >
+                        android:layout_height="wrap_content"
+                        android:id="@+id/surnameText"
+                        >   
                         <EditText
-                            android:id="@+id/surname"
                             android:inputType="text"
+                            android:imeOptions="actionNext"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Surname"
+                            android:textSize="@dimen/abc_text_size_medium_material"
 					/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:id="@+id/Layout_id"
-                        android:layout_width="fill_parent"
-                        android:layout_height="50sp"
-                        android:orientation="horizontal"
-			        >
+                        </android.support.design.widget.TextInputLayout>
+                  
+                  
+                     <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/idText"
+                        >   
                         <EditText
-                            android:id="@+id/id"
                             android:inputType="number"
+                            android:imeOptions="actionNext"
                             android:layout_width="match_parent"
                             android:layout_height="fill_parent"
                             android:hint="FriendshipBench ID"
                             android:textSize="@dimen/abc_text_size_medium_material"
 					/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:id="@+id/Layout_address"
-                        android:layout_width="fill_parent"
-                        android:layout_height="50sp"
-                        android:orientation="horizontal"
-			>
+                        </android.support.design.widget.TextInputLayout>
+                 
+            
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/addressText"
+                        >   
                         <EditText
-                            android:id="@+id/address"
                             android:inputType="textPostalAddress"
                             android:layout_width="match_parent"
-                            android:layout_height="fill_parent"
+                            android:layout_height="wrap_content"
                             android:hint="Physical Address"
+                            android:imeOptions="actionNext"
 					/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:id="@+id/Layout_contact"
-                        android:layout_width="fill_parent"
-                        android:layout_height="50sp"
-                        android:orientation="horizontal"
-			         >
+                        </android.support.design.widget.TextInputLayout>
+                    
+                      <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/contactText"
+                        >   
                         <EditText
-                            android:id="@+id/contact"
                             android:inputType="phone"
                             android:layout_width="match_parent"
                             android:layout_height="fill_parent"
                             android:hint="Contact Number"
+                            android:imeOptions="actionNext"
 					/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:id="@+id/Layout_dob"
-                        android:layout_width="fill_parent"
-                        android:layout_height="50sp"
-                        android:orientation="horizontal"
-			         >
-                        <EditText
-                            android:id="@+id/dob"
+                       </android.support.design.widget.TextInputLayout>
+                   
+                      <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dobText"
+                        >   
+                        <DatePicker
                             android:inputType="date"
                             android:layout_width="match_parent"
-                            android:layout_height="fill_parent"
+                            android:layout_height="50dp"
                             android:hint="Date of Birth"
+                            android:imeOptions="actionNext"
 					/>
-                    </LinearLayout>
-                    <LinearLayout
+                        </android.support.design.widget.TextInputLayout>
+                    <fr.ganfra.materialspinner.MaterialSpinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/genderspinner"
+                        app:ms_enableFloatingLabel="true"
+                        app:ms_floatingLabelText="Select Gender"
+                        app:ms_alignLabels="true"
+                    app:ms_hint="Select Gender"
+                />
+                  <!--  <LinearLayout
                         android:id="@+id/Layout_gender"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
@@ -168,7 +167,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
-                            
+                            android:id="@+id/gender"
+                            android:imeOptions="actionNext"
                             >
                             <RadioButton
                                 android:layout_width="wrap_content"
@@ -188,60 +188,47 @@
                             />
                         </RadioGroup>
             
-                    </LinearLayout>
-                    <LinearLayout
-                        android:id="@+id/Layout_workplace"
-                        android:layout_width="fill_parent"
-                        android:layout_height="50dp"
-                        android:orientation="horizontal"
-			>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="Workplace:"
-                            android:gravity="center_vertical"
-                            android:textSize="@dimen/abc_text_size_medium_material"
-                        />
-                        <Spinner
-                            android:id="@+id/spinner"
-                            android:layout_width="170dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="15dp"
-                            android:prompt="@string/workplace_prompt"
-                            
-                        />
-					/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:id="@+id/Layout_pass1"
-                        android:layout_width="fill_parent"
-                        android:layout_height="50sp"
-                        android:orientation="horizontal">
+                    </LinearLayout>-->
+                     <fr.ganfra.materialspinner.MaterialSpinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/workplacespinner"
+                        app:ms_enableFloatingLabel="true"
+                        app:ms_floatingLabelText="Select a Workplace"
+                        app:ms_alignLabels="true"
+                       app:ms_hint="Select a Workplace"
+                />
+                    
+                    
+                 
+                       <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/passwordText"
+                        >   
                         <EditText
                             android:inputType="textPassword"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Password"
-                            android:id="@+id/pass1" />
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:id="@+id/Layout_pass2"
-                        android:layout_width="fill_parent"
-                        android:layout_height="50sp"
-                        android:orientation="horizontal">
+                            android:imeOptions="actionNext" />
+                        </android.support.design.widget.TextInputLayout>
+                   
+                 
+                      <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cpasswordText"
+                        >   
                         <EditText
                             android:inputType="textPassword"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Confirm Password"
-                            android:id="@+id/pass2" />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:id="@+id/Layout_register"
-                        android:layout_width="fill_parent"
-                        android:layout_height="50sp"
-                        android:orientation="horizontal">
+                            android:imeOptions="actionNext" />
+                        </android.support.design.widget.TextInputLayout>
+                    
+                  
                          <Button
                             android:text="Register :)"
                             android:layout_width="match_parent"
@@ -249,37 +236,12 @@
                             android:textStyle="bold"
                             android:textSize="@dimen/abc_text_size_medium_material"
                             android:background="#fff2"
-                            android:id="@+id/btnsignin" />
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:id="@+id/Layout_registr"
-                        android:layout_width="fill_parent"
-                        android:layout_height="40sp"
-                        android:layout_marginBottom="10dp"
-                        android:orientation="horizontal">
-                        <Button
-                            android:text="i already have an Account"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginBottom="16dp"
-                            android:textColorHighlight="@android:color/darker_gray"
-                            android:onClick="AlreadyHaveAnAccountClicked()"
-                            android:textStyle="italic"
-                            android:textColor="@android:color/holo_blue_dark"
-                            android:textSize="@dimen/abc_text_size_small_material"
-                            android:gravity="center_vertical|center"
-                            android:background="@android:color/transparent"
-                            android:id="@+id/btnexistingaccount" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
+                            android:id="@+id/btnregister" />
 
 
-            </ScrollView>
+
 	</LinearLayout>
+ </ScrollView>
     </android.support.v7.widget.CardView>
 		
 </LinearLayout>

@@ -12,15 +12,30 @@
        android:layout_height="?android:attr/actionBarSize"
        android:background="@android:color/darker_gray"
     > 
-        <TextView
-            android:layout_width="match_parent"
+      
+          
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+            android:addStatesFromChildren="true"
+            android:clipChildren="true"
+            android:saveEnabled="true"
+            
+            
+            >
+            <Toolbar
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Main Menu"
-            android:textSize="@dimen/abc_text_size_large_material"
-            android:textStyle="bold"
-            android:gravity="center_horizontal"
-            android:textColor="@android:color/black"
-        />
+            android:title="Main Menu"
+            android:textAlignment="center"
+            android:gravity="center_horizontal | center"
+            android:layout_gravity="center"
+            android:titleTextAppearance="?android:attr/textAppearanceLarge">
+           </Toolbar>
+          
+           
+            </android.support.design.widget.CollapsingToolbarLayout>
+               
         </android.support.v7.widget.Toolbar>
   
     
